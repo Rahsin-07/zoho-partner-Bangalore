@@ -25,11 +25,11 @@ const brands = [
   },
   {
     name: 'Camp Monk',
-    logo: '/camp-monk-logo.png',
+    logo: '/camp-monk-logo.jfif.jpeg',
   },
   {
     name: 'Shiv Tours & Travels',
-    logo: '/shiv-tours-logo.png',
+    logo: '/shiv-tours-and-travels-logo.png',
   },
   {
     name: 'TN Spaces · True North Co',
