@@ -1,24 +1,24 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 15, Zoho Tips, Guides and Expert Resources
+// Section 15 — Zoho Tips, Guides and Expert Resources
 const articles = [
   {
     color: '#2563eb', category: 'Implementation', readTime: '8 min read',
-    title: 'How we structure a 30 minute Zoho audit (and why it works)',
+    title: 'How we structure a 30-minute Zoho audit (and why it works)',
     excerpt: 'The questions we ask, the screens we open, and the four red flags we look for before quoting a number.',
     icon: 'bi-clipboard2-check',
   },
   {
     color: '#dc2626', category: 'Automation', readTime: '11 min read',
     title: '5 Deluge patterns that quietly fail at scale (and our fixes)',
-    excerpt: 'Throttling, retry logic, idempotent updates, partial saves and audit logging, what most freelance scripts skip.',
+    excerpt: 'Throttling, retry logic, idempotent updates, partial saves and audit logging — what most freelance scripts skip.',
     icon: 'bi-code-slash',
   },
   {
     color: '#f59e0b', category: 'Migration', readTime: '14 min read',
     title: 'Tally to Zoho Books: a checklist from 1,500+ records of pain',
-    excerpt: 'PIN codes, MobilePhone formats, custom numbering, GST templates, lessons from the Image Star migration.',
+    excerpt: 'PIN codes, MobilePhone formats, custom numbering, GST templates — lessons from the Image Star migration.',
     icon: 'bi-arrow-left-right',
   },
 ]
@@ -45,7 +45,7 @@ export default function Resources() {
               Zoho Tips, Guides and <span className="grad-blue-yellow">Expert Resources</span>
             </h2>
             <p className="section-sub">
-              Keep your Zoho knowledge sharp with tutorials, best practices and actionable insights from India's trusted Zoho Partner, no SEO fluff, no chatbot ghost writing.
+              Keep your Zoho knowledge sharp with tutorials, best practices and actionable insights from India's trusted Zoho Partner — no SEO fluff, no chatbot ghost-writing.
             </p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0 d-none d-lg-block">
@@ -57,7 +57,7 @@ export default function Resources() {
 
         <div className="row g-4">
           {articles.map((a, i) => (
-            <div key={a.title} className={`col-md-6 col-lg-4 fade-up ${['zx-sl','zx-su','zx-sr'][i % 3]}`} style={{ transitionDelay: `${i * 0.08}s` }}>
+            <div key={a.title} className="col-md-6 col-lg-4 fade-up" style={{ transitionDelay: `${i * 0.08}s` }}>
               <a href="#" style={{ textDecoration: 'none', display: 'block', height: '100%' }}>
                 <article className="art-card" style={{
                   background: '#fff', border: '1px solid #e8e3dc', borderRadius: 22,
@@ -119,7 +119,7 @@ export default function Resources() {
 
                     <h3 className="art-title" style={{
                       fontSize: '1.1rem', fontWeight: 800,
-                      color: '#0b1220', fontFamily: 'Inter,sans-serif',
+                      color: '#0b1220', fontFamily: 'inter Sans,sans-serif',
                       lineHeight: 1.32, marginBottom: 10, letterSpacing: '-0.012em',
                       transition: 'color 0.3s', flex: 1,
                     }}>{a.title}</h3>
@@ -130,7 +130,7 @@ export default function Resources() {
                       display: 'flex', justifyContent: 'space-between',
                       alignItems: 'center', paddingTop: 14, borderTop: '1px solid #f0ece6',
                     }}>
-                      <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#64748b', fontFamily: 'Inter,sans-serif' }}>Read article</span>
+                      <span style={{ fontSize: '0.82rem', fontWeight: 700, color: '#64748b', fontFamily: 'inter Sans,sans-serif' }}>Read article</span>
                       <span className="art-arrow" style={{
                         width: 32, height: 32, borderRadius: 10,
                         background: `${a.color}15`, color: a.color,

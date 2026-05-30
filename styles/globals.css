@@ -41,7 +41,7 @@
   --success: #10b981;
 
   /* type */
-  --font-head: 'Plus Jakarta Sans', sans-serif;
+  --font-head: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', 'Menlo', monospace;
 
@@ -179,6 +179,32 @@ section { padding: 110px 0; }
 
 .fade-right { opacity: 0; transform: translateX(30px); transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out); }
 .fade-right.visible { opacity: 1; transform: translateX(0); }
+
+/* ── DIRECTIONAL SLIDE REVEALS (zx-*) ──
+   Pair with .fade-up on the same element (fade-up handles the opacity,
+   zx-* handles the directional transform). The existing IntersectionObserver
+   toggles .visible, so no extra JS wiring is needed. */
+.zx-sl, .zx-sr, .zx-su, .zx-sd, .zx-zoom {
+  transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+  will-change: transform, opacity;
+}
+.zx-sl   { transform: translateX(-48px); }
+.zx-sr   { transform: translateX(48px); }
+.zx-su   { transform: translateY(42px); }
+.zx-sd   { transform: translateY(-42px); }
+.zx-zoom { transform: scale(0.9); }
+.zx-sl.visible, .zx-sr.visible, .zx-su.visible,
+.zx-sd.visible, .zx-zoom.visible { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .zx-sl, .zx-sr, .zx-su, .zx-sd, .zx-zoom { transform: none; transition: none; }
+}
+
+/* ── HERO SLIDER ── */
+.zx-hero-track { display: flex; transition: transform 0.8s cubic-bezier(.45,.05,.2,1); }
+.zx-hero-slide { flex: 0 0 100%; width: 100%; }
+@keyframes zx-dot-fill { from { width: 0; } to { width: 100%; } }
+.zx-dot-progress { animation: zx-dot-fill linear forwards; }
 
 @keyframes blob-drift {
   0%,100% { transform: translate(0,0) scale(1); }

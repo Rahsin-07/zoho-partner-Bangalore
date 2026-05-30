@@ -1,9 +1,9 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 
-// Section 16, Let's build your Zoho system (Contact form)
+// Section 16 — Let's build your Zoho system (Contact form)
 const benefits = [
-  { icon: 'bi-lightning-charge-fill', color: '#fcd34d', title: 'Same day reply',     desc: 'A senior consultant replies to every form, every day.' },
+  { icon: 'bi-lightning-charge-fill', color: '#fcd34d', title: 'Same-day reply',     desc: 'A senior consultant replies to every form, every day.' },
   { icon: 'bi-shield-check',          color: '#93c5fd', title: 'Zero obligation',    desc: 'No credit card. No spam. Just a clear conversation.' },
   { icon: 'bi-person-badge',          color: '#fca5a5', title: 'No SDRs',            desc: 'You talk to someone who can actually fix things.' },
 ]
@@ -33,7 +33,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Demo handling, wire to your backend / Zoho Forms / mailto.
+    // Demo handling — wire to your backend / Zoho Forms / mailto.
     const subject = encodeURIComponent(`New requirement from ${form.name || 'website'}`)
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nRequirement:\n${form.requirement}`
@@ -51,14 +51,14 @@ export default function Contact() {
 
       <div className="container position-relative">
         <div className="row g-5 align-items-stretch">
-          {/* LEFT, copy & channels */}
-          <div className="col-lg-5 fade-up zx-sl">
+          {/* LEFT — copy & channels */}
+          <div className="col-lg-5 fade-up">
             <div className="section-label">Get in Touch</div>
             <h2 className="section-title">
               Let's build your <span className="grad-blue-red">Zoho system</span>
             </h2>
             <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.75, fontFamily: 'Inter,sans-serif', marginBottom: 28 }}>
-              Tell us your requirements, and our team will connect with you shortly. We reply same day, usually in under 4 hours during business hours.
+              Tell us your requirements, and our team will connect with you shortly. We reply same-day — usually in under 4 hours during business hours.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32 }}>
@@ -91,7 +91,7 @@ export default function Contact() {
                     <i className={`bi ${b.icon}`} />
                   </div>
                   <div>
-                    <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '0.94rem', color: '#0b1220', marginBottom: 2 }}>{b.title}</div>
+                    <div style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '0.94rem', color: '#0b1220', marginBottom: 2 }}>{b.title}</div>
                     <div style={{ fontSize: '0.82rem', color: '#64748b', fontFamily: 'Inter,sans-serif', lineHeight: 1.5 }}>{b.desc}</div>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: '0.72rem', fontWeight: 700, color: '#94a3b8', letterSpacing: 1.2, textTransform: 'uppercase', fontFamily: 'Inter,sans-serif' }}>{c.label}</div>
-                    <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, fontSize: '0.92rem', color: '#0b1220' }}>{c.value}</div>
+                    <div style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 700, fontSize: '0.92rem', color: '#0b1220' }}>{c.value}</div>
                   </div>
                   <i className="bi bi-arrow-up-right" style={{ color: '#94a3b8', fontSize: '0.92rem' }} />
                 </a>
@@ -146,8 +146,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT, Form */}
-          <div className="col-lg-7 fade-up zx-sr" style={{ transitionDelay: '0.15s' }}>
+          {/* RIGHT — Form */}
+          <div className="col-lg-7 fade-up" style={{ transitionDelay: '0.15s' }}>
             <div style={{
               background: '#fff', borderRadius: 26, padding: '40px 36px',
               border: '1px solid #e8e3dc', position: 'relative', overflow: 'hidden',
@@ -167,24 +167,24 @@ export default function Contact() {
                   }}>
                     <i className="bi bi-check-lg" />
                   </div>
-                  <h3 style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '1.4rem', color: '#0b1220', marginBottom: 8 }}>
-                    Thanks, we've got it.
+                  <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '1.4rem', color: '#0b1220', marginBottom: 8 }}>
+                    Thanks — we've got it.
                   </h3>
                   <p style={{ fontSize: '0.94rem', color: '#64748b', fontFamily: 'Inter,sans-serif', maxWidth: 380, margin: '0 auto' }}>
-                    Your email client just opened with the message pre filled. Once you hit send, our team will reply same day.
+                    Your email client just opened with the message pre-filled. Once you hit send, our team will reply same day.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ position: 'relative' }}>
                   <h3 style={{
-                    fontFamily: 'Inter,sans-serif', fontWeight: 800,
+                    fontFamily: 'inter Sans,sans-serif', fontWeight: 800,
                     fontSize: '1.5rem', color: '#0b1220', marginBottom: 6,
                     letterSpacing: '-0.014em',
                   }}>
                     Send My Requirement
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginBottom: 26 }}>
-                    Quick form, 60 seconds. We'll reply within the business day.
+                    Quick form — 60 seconds. We'll reply within the business day.
                   </p>
 
                   <div className="row g-3">
@@ -211,7 +211,7 @@ export default function Contact() {
                         Your Requirement *
                       </label>
                       <textarea required value={form.requirement} onChange={handleChange('requirement')} className="zfx-input" rows={5}
-                        placeholder="Briefly describe what you need help with, implementation, migration, customization, app development, support..."
+                        placeholder="Briefly describe what you need help with — implementation, migration, customization, app development, support..."
                       />
                     </div>
                   </div>

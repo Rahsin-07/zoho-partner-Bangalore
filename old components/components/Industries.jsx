@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 8, Industries (Business Sectors We Serve)
+// Section 8 — Industries (Business Sectors We Serve)
 const industries = [
   { name: 'Education',           icon: 'bi-mortarboard-fill',   color: '#2563eb' },
   { name: 'Construction',        icon: 'bi-buildings',          color: '#dc2626' },
@@ -44,16 +44,16 @@ export default function Industries() {
             <span className="section-label section-label-yellow">Industries</span>
           </div>
           <h2 className="section-title">
-            Business Sectors We Serve as a Trusted <span className="grad-red-yellow">Zoho Partner in Bangalore</span>
+            Business Sectors We Serve — <span className="grad-red-yellow">Across India</span>
           </h2>
           <p className="section-sub mx-auto">
-            Whether it's a SaaS startup, an IT company, a D2C brand, a manufacturer, or an EdTech company, Bangalore businesses move fast. Every sector is unique, and so is every Zoho setup we deliver.
+            Whether it's a SaaS startup, an IT company, a D2C brand, a manufacturer, or an EdTech company — Bangalore businesses move fast. Every sector is unique, and so is every Zoho setup we deliver.
           </p>
         </div>
 
         <div className="row g-3 g-md-4">
           {industries.map((ind, i) => (
-            <div key={ind.name} className={`col-6 col-md-4 col-lg-3 fade-up ${i % 2 ? 'zx-sr' : 'zx-sl'}`} style={{ transitionDelay: `${i * 0.03}s` }}>
+            <div key={ind.name} className="col-6 col-md-4 col-lg-3 fade-up" style={{ transitionDelay: `${i * 0.03}s` }}>
               <div className="ind-card" style={{
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 16,
                 padding: '24px 18px', height: '100%', textAlign: 'center',
@@ -99,7 +99,7 @@ export default function Industries() {
                   <i className={`bi ${ind.icon}`} />
                 </div>
                 <div className="ind-name" style={{
-                  fontFamily: 'Inter,sans-serif', fontWeight: 700,
+                  fontFamily: 'inter Sans,sans-serif', fontWeight: 700,
                   fontSize: '0.92rem', color: '#0b1220',
                   transition: 'color 0.3s', position: 'relative', zIndex: 1, lineHeight: 1.3,
                 }}>{ind.name}</div>

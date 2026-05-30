@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 13, Voices of Our Happy Customers
+// Section 13 — Voices of Our Happy Customers
 const testimonials = [
   {
     color: '#2563eb',
@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     color: '#dc2626',
-    quote: "I was sceptical about a managed service after our last partner ghosted us. ZoFlowX is the opposite, they reply same day, every change is logged, and our CFO can finally pull a clean P&L without IT in the loop.",
+    quote: "I was sceptical about a managed service after our last partner ghosted us. ZoFlowX is the opposite — they reply same day, every change is logged, and our CFO can finally pull a clean P&L without IT in the loop.",
     name: 'Daniel A.', role: 'CFO · Manufacturing exporter, Chennai', initial: 'DA', rating: 5,
   },
   {
@@ -36,7 +36,7 @@ export default function Testimonials() {
     <section id="testimonials" ref={ref} style={{ background: '#fff', position: 'relative', overflow: 'hidden' }}>
       <div aria-hidden style={{
         position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)',
-        fontSize: '20rem', fontFamily: 'Inter,sans-serif',
+        fontSize: '20rem', fontFamily: 'inter Sans,sans-serif',
         fontWeight: 900, color: 'rgba(11,18,32,0.025)', lineHeight: 1,
         pointerEvents: 'none', userSelect: 'none',
       }}>"</div>
@@ -50,13 +50,13 @@ export default function Testimonials() {
             Voices of Our <span className="grad-red-yellow">Happy Customers</span>
           </h2>
           <p className="section-sub mx-auto">
-            Genuine results shared by real businesses, discover why companies across India consistently choose ZoFlowX as their authorized Zoho Partner.
+            Genuine results shared by real businesses — discover why companies across India consistently choose ZoFlowX as their authorized Zoho Partner.
           </p>
         </div>
 
         <div className="row g-4">
           {testimonials.map((t, i) => (
-            <div key={t.name} className={`col-md-6 col-lg-4 fade-up ${['zx-sl','zx-su','zx-sr'][i % 3]}`} style={{ transitionDelay: `${i * 0.08}s` }}>
+            <div key={t.name} className="col-md-6 col-lg-4 fade-up" style={{ transitionDelay: `${i * 0.08}s` }}>
               <div style={{
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 22,
                 padding: '34px 28px 28px', height: '100%',
@@ -115,13 +115,13 @@ export default function Testimonials() {
                     width: 46, height: 46, borderRadius: '50%',
                     background: t.color, color: '#fff',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontFamily: 'Inter,sans-serif', fontWeight: 800,
+                    fontFamily: 'inter Sans,sans-serif', fontWeight: 800,
                     fontSize: '0.88rem', flexShrink: 0,
                     boxShadow: `0 6px 16px ${t.color}40`,
                     transition: 'transform 0.4s cubic-bezier(.2,.7,.2,1)',
                   }}>{t.initial}</div>
                   <div>
-                    <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '0.92rem', color: '#0b1220' }}>{t.name}</div>
+                    <div style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '0.92rem', color: '#0b1220' }}>{t.name}</div>
                     <div style={{ fontSize: '0.78rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginTop: 1 }}>{t.role}</div>
                   </div>
                 </div>

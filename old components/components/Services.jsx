@@ -1,26 +1,26 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 7, Services We Deliver
+// Section 7 — Services We Deliver
 const PALETTE = ['#2563eb', '#dc2626', '#f59e0b']
 
 const services = [
   {
     tag: 'Implement', icon: 'bi-tools',
     title: 'Zoho Implementation',
-    desc: 'New to Zoho or facing issues with setup? Your trusted Zoho Partner in Bangalore, ZoFlowX helps you implement, configure and fine tune Zoho from scratch, so your business runs smoothly from day one.',
+    desc: 'New to Zoho or facing issues with setup? Your trusted Zoho Partner in Bangalore, ZoFlowX helps you implement, configure and fine-tune Zoho from scratch — so your business runs smoothly from day one.',
     cta: 'Implement Zoho',
   },
   {
     tag: 'Migrate', icon: 'bi-arrow-left-right',
     title: 'Zoho Data Migration & Integrations',
-    desc: 'As a certified Zoho Partner, we handle complete data migration and third party integrations, moving your existing data into Zoho cleanly, securely, and without a single hour of downtime.',
+    desc: 'As a certified Zoho Partner, we handle complete data migration and third-party integrations — moving your existing data into Zoho cleanly, securely, and without a single hour of downtime.',
     cta: 'Migrate to Zoho',
   },
   {
     tag: 'Customize', icon: 'bi-sliders',
     title: 'Zoho Customization',
-    desc: "Standard Zoho configurations don't always work. Our Bangalore team customizes modules, workflows, and automations to fit your business, not the other way around.",
+    desc: "Standard Zoho configurations don't always work. Our Bangalore team customizes modules, workflows, and automations to fit your business — not the other way around.",
     cta: 'Customize My Zoho',
   },
   {
@@ -32,14 +32,14 @@ const services = [
   {
     tag: 'Manage', icon: 'bi-life-preserver',
     title: 'Zoho Managed Services',
-    desc: 'Implementation is just the start. Your Zoho runs without interruption with ZoFlowX as your dedicated Zoho Partner, daily support, system updates, troubleshooting, and continuous improvements.',
+    desc: 'Implementation is just the start. Your Zoho runs without interruption with ZoFlowX as your dedicated Zoho Partner — daily support, system updates, troubleshooting, and continuous improvements.',
     cta: 'Get Managed Services',
   },
 ]
 
-function ServiceCard({ s, color, delay, dir }) {
+function ServiceCard({ s, color, delay }) {
   return (
-    <div className={`col-md-6 col-lg-4 fade-up ${dir}`} style={{ transitionDelay: `${delay}s` }}>
+    <div className="col-md-6 col-lg-4 fade-up" style={{ transitionDelay: `${delay}s` }}>
       <div className="svc-card" style={{
         background: '#fff', border: '1px solid #e8e3dc', borderRadius: 22,
         padding: '34px 28px', height: '100%',
@@ -107,7 +107,7 @@ function ServiceCard({ s, color, delay, dir }) {
 
         <h3 style={{
           fontSize: '1.18rem', fontWeight: 800, marginBottom: 12,
-          color: '#0b1220', fontFamily: 'Inter,sans-serif', lineHeight: 1.3,
+          color: '#0b1220', fontFamily: 'inter Sans,sans-serif', lineHeight: 1.3,
           letterSpacing: '-0.012em',
         }}>{s.title}</h3>
 
@@ -119,7 +119,7 @@ function ServiceCard({ s, color, delay, dir }) {
         <a href="#contact" className="svc-cta" style={{
           display: 'inline-flex', alignItems: 'center', gap: 8,
           fontSize: '0.86rem', fontWeight: 700, color: '#0b1220',
-          textDecoration: 'none', fontFamily: 'Inter,sans-serif',
+          textDecoration: 'none', fontFamily: 'inter Sans,sans-serif',
           transition: 'all 0.28s',
         }}>
           {s.cta} <i className="bi bi-arrow-right" />
@@ -148,10 +148,10 @@ export default function Services() {
           <div className="col-lg-8">
             <div className="section-label">Services</div>
             <h2 className="section-title">
-              Zoho Services We Deliver <span className="grad-blue-red">Across Every Industry</span>
+              Zoho Services We Deliver — <span className="grad-blue-red">Across Every Industry</span>
             </h2>
             <p className="section-sub">
-              As a trusted Zoho Partner in Bangalore, our certified experts bring hands on, real world experience across the complete Zoho product suite, helping businesses set up, adapt and grow.
+              As a trusted Zoho Partner in Bangalore, our certified experts bring hands-on, real-world experience across the complete Zoho product suite — helping businesses set up, adapt and grow.
             </p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0 d-none d-lg-block">
@@ -163,7 +163,7 @@ export default function Services() {
 
         <div className="row g-4">
           {services.map((s, i) => (
-            <ServiceCard key={s.title} s={s} color={PALETTE[i % 3]} delay={i * 0.05} dir={i % 2 ? 'zx-sr' : 'zx-sl'} />
+            <ServiceCard key={s.title} s={s} color={PALETTE[i % 3]} delay={i * 0.05} />
           ))}
         </div>
 
@@ -189,14 +189,14 @@ export default function Services() {
                 textTransform: 'uppercase', color: '#f59e0b', marginBottom: 12,
               }}>One Partner. Every Zoho Service.</div>
               <h3 style={{
-                color: '#fff', fontFamily: 'Inter,sans-serif',
+                color: '#fff', fontFamily: 'inter Sans,sans-serif',
                 fontSize: 'clamp(1.4rem, 2.5vw, 2rem)', marginBottom: 8,
                 lineHeight: 1.2, letterSpacing: '-0.018em',
               }}>
                 Zoho works best when it's set up right. We make sure your business is never on the wrong side of that gap.
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.96rem', marginBottom: 0, fontFamily: 'Inter,sans-serif' }}>
-                Implementation, customization, migration, app development and ongoing managed services, all under one Bangalore roof.
+                Implementation, customization, migration, app development and ongoing managed services — all under one Bangalore roof.
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">

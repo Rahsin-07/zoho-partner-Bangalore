@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 11, Built Around Your Business (short CTA banner)
+// Section 11 — Built Around Your Business (short CTA banner)
 export default function CustomBuild() {
   const ref = useRef(null)
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function CustomBuild() {
                 Built Around Your Business
               </div>
               <h2 style={{
-                color: '#fff', fontFamily: 'Inter,sans-serif',
+                color: '#fff', fontFamily: 'inter Sans,sans-serif',
                 fontSize: 'clamp(1.7rem, 3.5vw, 2.6rem)', marginBottom: 10,
                 lineHeight: 1.2, letterSpacing: '-0.02em',
               }}>
@@ -74,7 +74,7 @@ export default function CustomBuild() {
                 color: 'rgba(255,255,255,0.74)', fontSize: '1rem', marginBottom: 0,
                 fontFamily: 'Inter,sans-serif', lineHeight: 1.72, maxWidth: 620,
               }}>
-                Custom modules, automations, integrations, or apps, if standard Zoho can't do it, we build it. Scoped, designed and delivered around your team's exact workflow.
+                Custom modules, automations, integrations, or apps — if standard Zoho can't do it, we build it. Scoped, designed and delivered around your team's exact workflow.
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">

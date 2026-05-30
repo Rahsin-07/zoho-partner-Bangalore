@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 10, Hire a Zoho Developer in Bangalore
+// Section 10 — Hire a Zoho Developer in Bangalore
 const benefits = [
   { icon: 'bi-eye-fill',     color: '#2563eb', title: 'Workflow First, Build Second',     desc: "Developers learn how your business actually runs before they write a single line of Deluge." },
-  { icon: 'bi-shield-check', color: '#dc2626', title: 'No Surprises Mid Build',           desc: 'Clear scope, structured development, thorough testing, no rework after handover.' },
-  { icon: 'bi-stars',        color: '#f59e0b', title: 'Industry Tested Talent',           desc: "Developers who've already solved problems like yours in retail, manufacturing and services." },
-  { icon: 'bi-clock-history', color: '#2563eb', title: 'On Demand, Consistent',            desc: 'Dedicated to your business, not juggling 10 other clients. Same developer every week.' },
+  { icon: 'bi-shield-check', color: '#dc2626', title: 'No Surprises Mid-Build',           desc: 'Clear scope, structured development, thorough testing — no rework after handover.' },
+  { icon: 'bi-stars',        color: '#f59e0b', title: 'Industry-Tested Talent',           desc: "Developers who've already solved problems like yours in retail, manufacturing and services." },
+  { icon: 'bi-clock-history', color: '#2563eb', title: 'On-Demand, Consistent',            desc: 'Dedicated to your business — not juggling 10 other clients. Same developer every week.' },
 ]
 
 const skillTags = [
@@ -34,8 +34,8 @@ export default function DeveloperHire() {
 
       <div className="container position-relative">
         <div className="row align-items-center g-5">
-          {/* LEFT, copy */}
-          <div className="col-lg-6 fade-up zx-sl">
+          {/* LEFT — copy */}
+          <div className="col-lg-6 fade-up">
             <div className="section-label">Hire a Developer</div>
             <h2 className="section-title">
               Hire a Zoho Developer in Bangalore <span className="grad-blue-red">Who Gets Real Work Done</span>
@@ -75,7 +75,7 @@ export default function DeveloperHire() {
                       <i className={`bi ${b.icon}`} />
                     </div>
                     <div>
-                      <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '0.88rem', color: '#0b1220', marginBottom: 2 }}>{b.title}</div>
+                      <div style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '0.88rem', color: '#0b1220', marginBottom: 2 }}>{b.title}</div>
                       <div style={{ fontSize: '0.78rem', color: '#64748b', fontFamily: 'Inter,sans-serif', lineHeight: 1.5 }}>{b.desc}</div>
                     </div>
                   </div>
@@ -88,8 +88,8 @@ export default function DeveloperHire() {
             </a>
           </div>
 
-          {/* RIGHT, developer profile mockup */}
-          <div className="col-lg-6 fade-up zx-sr" style={{ transitionDelay: '0.15s' }}>
+          {/* RIGHT — developer profile mockup */}
+          <div className="col-lg-6 fade-up" style={{ transitionDelay: '0.15s' }}>
             <div style={{
               background: '#fff', borderRadius: 26, padding: '36px 32px',
               border: '1px solid #e8e3dc', position: 'relative', overflow: 'hidden',
@@ -108,7 +108,7 @@ export default function DeveloperHire() {
                   <i className="bi bi-code-square" />
                 </div>
                 <div>
-                  <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '1.05rem', color: '#0b1220' }}>Dedicated Zoho Developer</div>
+                  <div style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '1.05rem', color: '#0b1220' }}>Dedicated Zoho Developer</div>
                   <div style={{ fontSize: '0.82rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginTop: 2, display: 'inline-flex', alignItems: 'center', gap: 6 }}>
                     <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#10b981', display: 'inline-block', animation: 'pulse-soft 2s infinite' }} />
                     Available · From 1 week
@@ -135,7 +135,7 @@ export default function DeveloperHire() {
               }}>
                 <div style={{ fontSize: '0.7rem', fontWeight: 800, letterSpacing: 1.6, textTransform: 'uppercase', color: '#94a3b8', fontFamily: 'Inter,sans-serif', marginBottom: 12 }}>Engagement</div>
                 {[
-                  { l: 'Working hours', v: 'Flexible · 20 to 160 hrs/mo' },
+                  { l: 'Working hours', v: 'Flexible · 20–160 hrs/mo' },
                   { l: 'Communication', v: 'Daily standups + Slack' },
                   { l: 'Time zone',     v: 'IST · same as your team' },
                   { l: 'Handover',      v: 'Docs + walkthrough video' },
@@ -146,7 +146,7 @@ export default function DeveloperHire() {
                     borderBottom: i < arr.length - 1 ? '1px dashed #e8e3dc' : 'none',
                   }}>
                     <span style={{ fontSize: '0.8rem', color: '#64748b', fontFamily: 'Inter,sans-serif' }}>{r.l}</span>
-                    <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#0b1220' }}>{r.v}</span>
+                    <span style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#0b1220' }}>{r.v}</span>
                   </div>
                 ))}
               </div>

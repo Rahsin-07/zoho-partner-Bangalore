@@ -1,13 +1,13 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 4, Common Problems (6 problems from brief)
+// Section 4 — Common Problems (6 problems from brief)
 const problems = [
   {
     icon: 'bi-person-rolodex',
     color: '#dc2626',
     title: 'Your CRM is just a contact list',
-    desc: "Your team is losing leads because there's no proper pipeline, no follow up automation, and no lead scoring.",
+    desc: "Your team is losing leads because there's no proper pipeline, no follow-up automation, and no lead scoring.",
   },
   {
     icon: 'bi-whatsapp',
@@ -25,13 +25,13 @@ const problems = [
     icon: 'bi-diagram-3',
     color: '#dc2626',
     title: 'Your apps do not talk to each other',
-    desc: "Your website, payment tools, WhatsApp and ERP are all independent. Your team manually enters data into Zoho, it doesn't flow there automatically.",
+    desc: "Your website, payment tools, WhatsApp and ERP are all independent. Your team manually enters data into Zoho — it doesn't flow there automatically.",
   },
   {
     icon: 'bi-arrow-repeat',
     color: '#2563eb',
     title: 'You moved to Zoho but nothing really changed',
-    desc: 'You paid for the subscription, maybe even got a basic setup done, but day to day operations still feel exactly the same as before.',
+    desc: 'You paid for the subscription, maybe even got a basic setup done, but day-to-day operations still feel exactly the same as before.',
   },
   {
     icon: 'bi-shield-exclamation',
@@ -66,13 +66,13 @@ export default function Problem() {
             What Happens When Zoho <span className="grad-red-yellow">Setup Goes Wrong</span>
           </h2>
           <p className="section-sub mx-auto">
-            Most Zoho implementations fail not because of the platform, but because of how it's configured. Poor setup, missing automation, no team training, that's the real problem.
+            Most Zoho implementations fail not because of the platform, but because of how it's configured. Poor setup, missing automation, no team training — that's the real problem.
           </p>
         </div>
 
         <div className="row g-4">
           {problems.map((p, i) => (
-            <div key={p.title} className={`col-md-6 col-lg-4 fade-up ${i % 2 ? 'zx-sr' : 'zx-sl'}`} style={{ transitionDelay: `${i * 0.06}s` }}>
+            <div key={p.title} className="col-md-6 col-lg-4 fade-up" style={{ transitionDelay: `${i * 0.06}s` }}>
               <div className="prob-card" style={{
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 20,
                 padding: '30px 28px', height: '100%',
@@ -135,7 +135,7 @@ export default function Problem() {
 
                 <h3 style={{
                   fontSize: '1.08rem', fontWeight: 800, marginBottom: 10,
-                  color: '#0b1220', fontFamily: 'Inter,sans-serif',
+                  color: '#0b1220', fontFamily: 'inter Sans,sans-serif',
                   lineHeight: 1.32, letterSpacing: '-0.012em', position: 'relative',
                 }}>{p.title}</h3>
 
@@ -171,11 +171,11 @@ export default function Problem() {
                 fontSize: '1rem', color: '#334155',
                 fontFamily: 'Inter,sans-serif', lineHeight: 1.7,
               }}>
-                Most businesses come to us after months of struggle with a Zoho setup that wasn't built for them. <strong style={{ color: '#0b1220' }}>We fix that.</strong> Book a free 30 minute audit and we'll show you exactly what's wrong and how to fix it.
+                Most businesses come to us after months of struggle with a Zoho setup that wasn't built for them. <strong style={{ color: '#0b1220' }}>We fix that.</strong> Book a free 30-minute audit and we'll show you exactly what's wrong and how to fix it.
               </div>
             </div>
             <a href="#contact" className="btn-gradient ahover">
-              Book My Free 30 Min Audit <i className="bi bi-arrow-right" />
+              Book My Free 30-Min Audit <i className="bi bi-arrow-right" />
             </a>
           </div>
           <p style={{

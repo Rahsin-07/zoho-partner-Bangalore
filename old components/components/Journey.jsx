@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 3, Your Zoho Journey (two card "where you are")
+// Section 3 — Your Zoho Journey (two-card "where you are")
 const journeyCards = [
   {
     badge: 'Just Starting Out',
     color: '#2563eb',
     icon: 'bi-rocket-takeoff',
     title: 'Ready to Build on Zoho the Right Way?',
-    desc: 'When you get Zoho right from the beginning, selecting the right tools, configuring them appropriately, and making sure your team uses them, every dollar of your subscription is worth it.',
+    desc: 'When you get Zoho right from the beginning — selecting the right tools, configuring them appropriately, and making sure your team uses them — every dollar of your subscription is worth it.',
     cta: 'Guide me through a proper Zoho setup',
     points: [
       'Apps & licensing scoped to your real needs',
@@ -26,7 +26,7 @@ const journeyCards = [
     points: [
       'Free audit of your current setup',
       'Identify gaps, fixes & quick wins',
-      'Re architect what isn\'t working',
+      'Re-architect what isn\'t working',
     ],
   },
 ]
@@ -54,7 +54,7 @@ export default function Journey() {
             <span className="section-label">Your Zoho Journey</span>
           </div>
           <h2 className="section-title">
-            No Matter Where You Stand with Zoho <span className="grad-blue-red">We Have the Right Solution</span>
+            No Matter Where You Stand with Zoho — <span className="grad-blue-red">We Have the Right Solution</span>
           </h2>
           <p className="section-sub mx-auto">
             Every business is at a different stage in its Zoho journey. We meet you where you are and guide you to the next level.
@@ -63,7 +63,7 @@ export default function Journey() {
 
         <div className="row g-4 justify-content-center">
           {journeyCards.map((c, i) => (
-            <div key={c.badge} className={`col-md-6 fade-up ${i % 2 ? 'zx-sr' : 'zx-sl'}`} style={{ transitionDelay: `${i * 0.1}s` }}>
+            <div key={c.badge} className="col-md-6 fade-up" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div style={{
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 24,
                 padding: '36px 32px', height: '100%',
@@ -132,7 +132,7 @@ export default function Journey() {
 
                 <h3 style={{
                   fontSize: '1.45rem', fontWeight: 800, marginBottom: 12,
-                  color: '#0b1220', fontFamily: 'Inter,sans-serif',
+                  color: '#0b1220', fontFamily: 'inter Sans,sans-serif',
                   lineHeight: 1.25, letterSpacing: '-0.014em', position: 'relative',
                 }}>{c.title}</h3>
 
@@ -158,7 +158,7 @@ export default function Journey() {
                   background: 'transparent', color: c.color,
                   border: `2px solid ${c.color}`,
                   borderRadius: 12, padding: '0.78rem 1.5rem',
-                  fontFamily: 'Inter,sans-serif', fontWeight: 700, fontSize: '0.88rem',
+                  fontFamily: 'inter Sans,sans-serif', fontWeight: 700, fontSize: '0.88rem',
                   textDecoration: 'none', transition: 'all 0.3s', position: 'relative',
                 }}>
                   {c.cta} <i className="bi bi-arrow-right" />

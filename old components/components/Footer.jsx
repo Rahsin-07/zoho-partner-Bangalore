@@ -47,7 +47,7 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
               <LogoMark size={36} />
               <div style={{
-                fontFamily: 'Inter,sans-serif', fontSize: '1.6rem',
+                fontFamily: 'inter Sans,sans-serif', fontSize: '1.6rem',
                 fontWeight: 800, color: '#fff', letterSpacing: '-0.02em',
               }}>
                 ZoFlow
@@ -73,7 +73,7 @@ export default function Footer() {
               fontSize: '0.9rem', maxWidth: 360, lineHeight: 1.7,
               color: 'rgba(255,255,255,0.55)', fontFamily: 'Inter,sans-serif', marginBottom: 22,
             }}>
-              ZoFlowX is a certified Zoho Authorized Partner in Bangalore, India, helping businesses implement, customize, migrate and manage Zoho the right way. Serving startups to enterprises across India and the USA.
+              ZoFlowX is a certified Zoho Authorized Partner in Bangalore, India — helping businesses implement, customize, migrate and manage Zoho the right way. Serving startups to enterprises across India and the USA.
             </p>
 
             <div style={{ display: 'flex', gap: 10 }}>
@@ -115,7 +115,7 @@ export default function Footer() {
 
           <div className="col-6 col-lg-2">
             <div style={{
-              fontFamily: 'Inter,sans-serif', fontSize: '0.78rem',
+              fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem',
               fontWeight: 800, letterSpacing: '1.8px', textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.45)', marginBottom: 18,
             }}>Company</div>
@@ -130,7 +130,7 @@ export default function Footer() {
 
           <div className="col-6 col-lg-3">
             <div style={{
-              fontFamily: 'Inter,sans-serif', fontSize: '0.78rem',
+              fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem',
               fontWeight: 800, letterSpacing: '1.8px', textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.45)', marginBottom: 18,
             }}>Services</div>
@@ -143,7 +143,7 @@ export default function Footer() {
             </ul>
 
             <div style={{
-              fontFamily: 'Inter,sans-serif', fontSize: '0.78rem',
+              fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem',
               fontWeight: 800, letterSpacing: '1.8px', textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.45)', marginTop: 24, marginBottom: 14,
             }}>Zoho Partner In</div>
@@ -171,7 +171,7 @@ export default function Footer() {
 
           <div className="col-lg-3">
             <div style={{
-              fontFamily: 'Inter,sans-serif', fontSize: '0.78rem',
+              fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem',
               fontWeight: 800, letterSpacing: '1.8px', textTransform: 'uppercase',
               color: 'rgba(255,255,255,0.45)', marginBottom: 18,
             }}>Contact</div>
@@ -212,7 +212,7 @@ export default function Footer() {
               }}>
                 <i className="bi bi-geo-alt" style={{ marginTop: 3 }} />
                 <span>
-                  Bangalore, Karnataka, India
+                  Bangalore, Karnataka — India
                   <br />
                   Serving clients across India & USA
                 </span>

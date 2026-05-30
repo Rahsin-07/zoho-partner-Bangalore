@@ -1,4 +1,4 @@
-// Reusable SVG mark inspired by the ZoFlowX logo, 
+// Reusable SVG mark inspired by the ZoFlowX logo —
 // a stylized "X" formed by red, yellow and blue strokes.
 // Used in the navbar, footer and decorative accents.
 

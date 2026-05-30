@@ -2,20 +2,20 @@
 import { useState, useEffect, useRef } from 'react'
 
 const faqs = [
-  { q: 'Why should Bangalore businesses choose ZoFlowX as their Zoho Partner?', a: "ZoFlowX is an Authorized Zoho Partner in Bangalore with proven experience helping local businesses implement, customize, and scale Zoho the right way. We understand how Bangalore businesses operate and build Zoho solutions around your exact needs, not a generic template." },
-  { q: 'What Zoho services does ZoFlowX offer to businesses in Bangalore?', a: "As a trusted Zoho Partner in Bangalore, ZoFlowX offers end to end Zoho services including implementation, customization, data migration, third party integrations, app development, and ongoing managed support, everything your Bangalore business needs under one roof." },
+  { q: 'Why should Bangalore businesses choose ZoFlowX as their Zoho Partner?', a: "ZoFlowX is an Authorized Zoho Partner in Bangalore with proven experience helping local businesses implement, customize, and scale Zoho the right way. We understand how Bangalore businesses operate and build Zoho solutions around your exact needs — not a generic template." },
+  { q: 'What Zoho services does ZoFlowX offer to businesses in Bangalore?', a: "As a trusted Zoho Partner in Bangalore, ZoFlowX offers end-to-end Zoho services including implementation, customization, data migration, third-party integrations, app development, and ongoing managed support — everything your Bangalore business needs under one roof." },
   { q: 'Can ZoFlowX build a custom Zoho solution for my specific industry in Bangalore?', a: 'Yes. ZoFlowX has delivered custom Zoho solutions for businesses across education, real estate, healthcare, retail, IT, and more in Bangalore. We study your industry workflows first and build a Zoho setup that fits how your sector actually operates.' },
-  { q: 'How can Zoho CRM help my Bangalore business close more deals?', a: 'Zoho CRM helps Bangalore businesses track every lead, automate follow ups, score prospects, and manage the full sales pipeline in one place. ZoFlowX sets it up specifically around your sales process so your team spends less time on admin and more time closing.' },
+  { q: 'How can Zoho CRM help my Bangalore business close more deals?', a: 'Zoho CRM helps Bangalore businesses track every lead, automate follow-ups, score prospects, and manage the full sales pipeline in one place. ZoFlowX sets it up specifically around your sales process so your team spends less time on admin and more time closing.' },
   { q: 'How much does Zoho implementation cost for a Bangalore business?', a: 'Zoho implementation costs vary based on the products required, level of customization, and business size. ZoFlowX offers transparent pricing tailored to Bangalore businesses of every budget. Book a free audit to get a clear estimate for your specific requirements.' },
-  { q: 'How fast can a Bangalore business go live with Zoho through ZoFlowX?', a: 'Most Bangalore businesses go live within 2 to 4 weeks depending on complexity. ZoFlowX follows a structured implementation process, discovery, configuration, testing, and training, so your team is up and running with minimal disruption.' },
-  { q: 'Can ZoFlowX migrate my existing business data to Zoho without any loss?', a: 'Yes. ZoFlowX handles complete data migration for Bangalore businesses from CRMs, Excel sheets, ERPs, and legacy systems to Zoho, with full data integrity, zero data loss, and no business downtime during the transition.' },
-  { q: 'Does ZoFlowX provide Zoho training for Bangalore business teams?', a: 'Yes. After every Zoho implementation, ZoFlowX provides hands on training sessions for your Bangalore team, covering daily usage, reporting, automation, and best practices, so your staff can use Zoho confidently from day one.' },
-  { q: 'What makes ZoFlowX different from other Zoho Partners in Bangalore?', a: 'Unlike most Zoho partners, ZoFlowX does not offer ready made setups. As the best Zoho Partner in Bangalore, we invest time understanding your business first, your workflows, gaps, and goals, and then build a Zoho system designed specifically around your operations.' },
-  { q: 'Can ZoFlowX integrate Zoho with other tools my business already uses?', a: 'Yes. ZoFlowX connects Zoho with your existing tools including your website, WhatsApp, payment gateways, ERP systems, and third party platforms, so all your business data flows automatically into Zoho without any manual effort.' },
-  { q: 'Does ZoFlowX offer ongoing Zoho support for businesses after implementation?', a: 'Yes. ZoFlowX provides dedicated post implementation support for businesses, covering system maintenance, troubleshooting, performance monitoring, and continuous improvements, so your Zoho setup keeps delivering results long term.' },
-  { q: 'Which Zoho products does ZoFlowX implement for Bangalore businesses?', a: 'ZoFlowX implements the complete Zoho suite for Bangalore businesses including Zoho CRM, Zoho One, Zoho Books, Zoho Analytics, Zoho Creator, Zoho Inventory, Zoho Desk, Zoho Campaigns, and more, based on what your business actually needs.' },
-  { q: 'Can a small business in Bangalore afford Zoho implementation with ZoFlowX?', a: 'Absolutely. ZoFlowX works with startups, small businesses, and growing companies across Bangalore. We offer flexible Zoho implementation packages designed to deliver maximum value within your budget, without compromising on quality or results.' },
-  { q: 'How do I get started with ZoFlowX as my Zoho Partner in Bangalore?', a: 'Getting started is simple. Book a free 30 minute Zoho audit with ZoFlowX. Our Bangalore team will review your current setup, understand your business requirements, and give you a clear roadmap, with no obligation and no sales pressure.' },
+  { q: 'How fast can a Bangalore business go live with Zoho through ZoFlowX?', a: 'Most Bangalore businesses go live within 2 to 4 weeks depending on complexity. ZoFlowX follows a structured implementation process — discovery, configuration, testing, and training — so your team is up and running with minimal disruption.' },
+  { q: 'Can ZoFlowX migrate my existing business data to Zoho without any loss?', a: 'Yes. ZoFlowX handles complete data migration for Bangalore businesses from CRMs, Excel sheets, ERPs, and legacy systems to Zoho — with full data integrity, zero data loss, and no business downtime during the transition.' },
+  { q: 'Does ZoFlowX provide Zoho training for Bangalore business teams?', a: 'Yes. After every Zoho implementation, ZoFlowX provides hands-on training sessions for your Bangalore team, covering daily usage, reporting, automation, and best practices — so your staff can use Zoho confidently from day one.' },
+  { q: 'What makes ZoFlowX different from other Zoho Partners in Bangalore?', a: 'Unlike most Zoho partners, ZoFlowX does not offer ready-made setups. As the best Zoho Partner in Bangalore, we invest time understanding your business first — your workflows, gaps, and goals — and then build a Zoho system designed specifically around your operations.' },
+  { q: 'Can ZoFlowX integrate Zoho with other tools my business already uses?', a: 'Yes. ZoFlowX connects Zoho with your existing tools including your website, WhatsApp, payment gateways, ERP systems, and third-party platforms — so all your business data flows automatically into Zoho without any manual effort.' },
+  { q: 'Does ZoFlowX offer ongoing Zoho support for businesses after implementation?', a: 'Yes. ZoFlowX provides dedicated post-implementation support for businesses, covering system maintenance, troubleshooting, performance monitoring, and continuous improvements — so your Zoho setup keeps delivering results long term.' },
+  { q: 'Which Zoho products does ZoFlowX implement for Bangalore businesses?', a: 'ZoFlowX implements the complete Zoho suite for Bangalore businesses including Zoho CRM, Zoho One, Zoho Books, Zoho Analytics, Zoho Creator, Zoho Inventory, Zoho Desk, Zoho Campaigns, and more — based on what your business actually needs.' },
+  { q: 'Can a small business in Bangalore afford Zoho implementation with ZoFlowX?', a: 'Absolutely. ZoFlowX works with startups, small businesses, and growing companies across Bangalore. We offer flexible Zoho implementation packages designed to deliver maximum value within your budget — without compromising on quality or results.' },
+  { q: 'How do I get started with ZoFlowX as my Zoho Partner in Bangalore?', a: 'Getting started is simple. Book a free 30-minute Zoho audit with ZoFlowX. Our Bangalore team will review your current setup, understand your business requirements, and give you a clear roadmap — with no obligation and no sales pressure.' },
 ]
 
 const relatedPages = [
@@ -43,14 +43,11 @@ export default function FAQ() {
       <div className="container">
         <div className="text-center mb-5 fade-up" style={{ maxWidth: 820, margin: '0 auto 56px' }}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <span className="section-label">FAQ</span>
+            <span className="section-label">Frequently Asked Questions</span>
           </div>
           <h2 className="section-title">
-            Frequently <span className="grad-blue-red">asked questions</span>
+            Questions come up? <span className="grad-blue-red">Let's clear them.</span>
           </h2>
-          <p className="section-sub mx-auto" style={{ marginBottom: 6 }}>
-            Questions come up? Let's clear them.
-          </p>
           <p className="section-sub mx-auto">
             Not sure about something? Here are clear answers to the questions most businesses ask before choosing Zoho.
           </p>
@@ -74,7 +71,7 @@ export default function FAQ() {
                         width: '100%', textAlign: 'left',
                         background: 'transparent', border: 'none',
                         padding: '22px 26px',
-                        fontFamily: 'Inter,sans-serif',
+                        fontFamily: 'inter Sans,sans-serif',
                         fontWeight: 700, fontSize: '0.98rem',
                         color: isOpen ? '#2563eb' : '#0b1220',
                         cursor: 'pointer',
@@ -87,7 +84,7 @@ export default function FAQ() {
                     >
                       <span style={{ display: 'flex', alignItems: 'center', gap: 14, flex: 1 }}>
                         <span style={{
-                          fontFamily: 'Inter,sans-serif',
+                          fontFamily: 'inter Sans,sans-serif',
                           fontSize: '0.78rem', fontWeight: 800,
                           color: isOpen ? '#2563eb' : '#94a3b8',
                           letterSpacing: 1, minWidth: 22,
@@ -142,13 +139,13 @@ export default function FAQ() {
 
             {/* Related pages */}
             <div className="fade-up" style={{ marginTop: 44 }}>
-              <h2 style={{
+              <h4 style={{
                 fontSize: '0.78rem', fontWeight: 700, color: '#64748b',
                 marginBottom: 16, fontFamily: 'Inter,sans-serif',
                 letterSpacing: 1.8, textTransform: 'uppercase',
               }}>
                 Related Pages
-              </h2>
+              </h4>
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
                 {relatedPages.map((page, i) => {
                   const colors = ['#2563eb', '#dc2626', '#f59e0b']

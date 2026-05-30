@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 5, Why ZoFlowX (3 reasons + intro per brief)
+// Section 5 — Why ZoFlowX (3 reasons + intro per brief)
 const reasons = [
   {
     icon: 'bi-search',
@@ -13,19 +13,19 @@ const reasons = [
     icon: 'bi-arrow-through-heart',
     color: '#dc2626',
     title: 'We See It Through, Start to Finish',
-    desc: 'From the first consultation to post launch support, our core team handles everything. No outsourcing. No ghosting after the project goes live.',
+    desc: 'From the first consultation to post-launch support, our core team handles everything. No outsourcing. No ghosting after the project goes live.',
   },
   {
     icon: 'bi-geo-alt-fill',
     color: '#f59e0b',
     title: 'Built for How Bangalore Businesses Operate',
-    desc: 'Local compliance, Bangalore relevant integrations like Razorpay, IndiaMART, and Tally, same timezone support, and a team that understands how local businesses actually run.',
+    desc: 'Local compliance, Bangalore-relevant integrations like Razorpay, IndiaMART, and Tally, same-timezone support, and a team that understands how local businesses actually run.',
   },
 ]
 
 const bullets = [
   '15+ Zoho specialists on staff',
-  '15+ years of hands on experience',
+  '15+ years of hands-on experience',
   '50+ implementations across India',
   'Bangalore + Mumbai + Chennai + Hyderabad',
 ]
@@ -56,7 +56,7 @@ export default function WhyUs() {
             Why Bangalore Businesses Choose <span className="grad-blue-red">ZoFlowX</span> as Their Zoho Partner
           </h2>
           <p className="section-sub mx-auto" style={{ maxWidth: 780 }}>
-            We're not just familiar with Zoho, we know why most implementations fail and how yours can succeed. We don't just configure; we learn your business and build Zoho around it.
+            We're not just familiar with Zoho — we know why most implementations fail and how yours can succeed. We don't just configure; we learn your business and build Zoho around it.
           </p>
 
           {/* Inline bullets */}
@@ -81,7 +81,7 @@ export default function WhyUs() {
 
         <div className="row g-4">
           {reasons.map((r, i) => (
-            <div key={r.title} className={`col-md-6 col-lg-4 fade-up ${['zx-sl','zx-su','zx-sr'][i % 3]}`} style={{ transitionDelay: `${i * 0.08}s` }}>
+            <div key={r.title} className="col-md-6 col-lg-4 fade-up" style={{ transitionDelay: `${i * 0.08}s` }}>
               <div style={{
                 position: 'relative', padding: '36px 30px',
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 22,
@@ -119,7 +119,7 @@ export default function WhyUs() {
                   transition: 'opacity 0.4s',
                 }} />
                 <div className="w-num" aria-hidden style={{
-                  position: 'absolute', top: 20, right: 24, fontFamily: 'Inter,sans-serif',
+                  position: 'absolute', top: 20, right: 24, fontFamily: 'inter Sans,sans-serif',
                   fontSize: '3.2rem', fontWeight: 900, letterSpacing: -2,
                   color: '#cbd5e1', opacity: 0.18, lineHeight: 1, transition: 'all 0.4s',
                 }}>0{i + 1}</div>
@@ -137,7 +137,7 @@ export default function WhyUs() {
                 <h3 style={{
                   fontSize: '1.22rem', fontWeight: 800,
                   marginBottom: 12, color: '#0b1220',
-                  fontFamily: 'Inter,sans-serif', lineHeight: 1.28,
+                  fontFamily: 'inter Sans,sans-serif', lineHeight: 1.28,
                   letterSpacing: '-0.014em', position: 'relative', zIndex: 1,
                 }}>{r.title}</h3>
 

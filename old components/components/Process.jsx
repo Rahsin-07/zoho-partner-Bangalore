@@ -1,14 +1,14 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 6, Our Process (Step by Step Zoho Implementation)
+// Section 6 — Our Process (Step-by-Step Zoho Implementation)
 const steps = [
-  { num: '01', icon: 'bi-chat-dots',          title: 'Free Audit',     desc: 'A 30 minute call where we listen, look at your current setup, and identify what\'s costing you time and money.' },
+  { num: '01', icon: 'bi-chat-dots',          title: 'Free Audit',     desc: 'A 30-minute call where we listen, look at your current setup, and identify what\'s costing you time and money.' },
   { num: '02', icon: 'bi-clipboard2-data',    title: 'Discovery',      desc: 'We map your business workflows and translate them into a Zoho blueprint your team will actually use.' },
   { num: '03', icon: 'bi-pencil-square',      title: 'Design & Plan',  desc: 'You get a written implementation plan with timelines, modules, integrations and clear deliverables. No guesswork.' },
-  { num: '04', icon: 'bi-hammer',             title: 'Build & Configure', desc: 'We set up, customize and integrate Zoho around your workflow, with demos at every milestone, not just at the end.' },
-  { num: '05', icon: 'bi-mortarboard',        title: 'Train Your Team', desc: 'Hands on training, recorded walkthroughs, and a custom playbook so your team owns the system from day one.' },
-  { num: '06', icon: 'bi-activity',           title: 'Run & Support',  desc: 'Ongoing managed services, monthly check-ins, quick support, and continuous improvement. We don\'t disappear.' },
+  { num: '04', icon: 'bi-hammer',             title: 'Build & Configure', desc: 'We set up, customize and integrate Zoho around your workflow — with demos at every milestone, not just at the end.' },
+  { num: '05', icon: 'bi-mortarboard',        title: 'Train Your Team', desc: 'Hands-on training, recorded walkthroughs, and a custom playbook so your team owns the system from day one.' },
+  { num: '06', icon: 'bi-activity',           title: 'Run & Support',  desc: 'Ongoing managed services — monthly check-ins, quick support, and continuous improvement. We don\'t disappear.' },
 ]
 
 const STEP_COLORS = [
@@ -57,11 +57,11 @@ export default function Process() {
             </span>
           </div>
           <h2 style={{
-            fontFamily: 'Inter,sans-serif',
+            fontFamily: 'inter Sans,sans-serif',
             fontSize: 'clamp(2rem, 4.3vw, 3.15rem)', fontWeight: 800,
             color: '#fff', marginBottom: 18, letterSpacing: '-0.024em', lineHeight: 1.08,
           }}>
-            Our Step by Step Zoho <span style={{
+            Step-by-Step Zoho <span style={{
               background: 'linear-gradient(95deg, #93c5fd, #fca5a5, #fcd34d)',
               WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
             }}>Implementation Process</span>
@@ -75,7 +75,7 @@ export default function Process() {
           </p>
         </div>
 
-        {/* Desktop horizontal timeline, 6 steps in 2 rows */}
+        {/* Desktop horizontal timeline — 6 steps in 2 rows */}
         <div className="d-none d-lg-block fade-up" style={{ marginTop: 60 }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 60, position: 'relative' }}>
             <div aria-hidden style={{
@@ -98,8 +98,8 @@ export default function Process() {
                   }}>
                     <i className={`bi ${s.icon}`} />
                   </div>
-                  <div style={{ fontFamily: 'Inter,sans-serif', fontSize: '0.72rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 6 }}>STEP {s.num}</div>
-                  <h3 style={{ fontFamily: 'Inter,sans-serif', fontSize: '1.16rem', fontWeight: 800, color: '#fff', marginBottom: 10, lineHeight: 1.3 }}>{s.title}</h3>
+                  <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.72rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 6 }}>STEP {s.num}</div>
+                  <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1.16rem', fontWeight: 800, color: '#fff', marginBottom: 10, lineHeight: 1.3 }}>{s.title}</h3>
                   <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.65, fontFamily: 'Inter,sans-serif', padding: '0 8px', marginBottom: 0 }}>{s.desc}</p>
                 </div>
               )
@@ -127,8 +127,8 @@ export default function Process() {
                   }}>
                     <i className={`bi ${s.icon}`} />
                   </div>
-                  <div style={{ fontFamily: 'Inter,sans-serif', fontSize: '0.72rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 6 }}>STEP {s.num}</div>
-                  <h3 style={{ fontFamily: 'Inter,sans-serif', fontSize: '1.16rem', fontWeight: 800, color: '#fff', marginBottom: 10, lineHeight: 1.3 }}>{s.title}</h3>
+                  <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.72rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 6 }}>STEP {s.num}</div>
+                  <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1.16rem', fontWeight: 800, color: '#fff', marginBottom: 10, lineHeight: 1.3 }}>{s.title}</h3>
                   <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.72)', lineHeight: 1.65, fontFamily: 'Inter,sans-serif', padding: '0 8px', marginBottom: 0 }}>{s.desc}</p>
                 </div>
               )
@@ -161,8 +161,8 @@ export default function Process() {
                   <i className={`bi ${s.icon}`} />
                 </div>
                 <div style={{ paddingTop: 6 }}>
-                  <div style={{ fontFamily: 'Inter,sans-serif', fontSize: '0.7rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 4 }}>STEP {s.num}</div>
-                  <h3 style={{ fontFamily: 'Inter,sans-serif', fontSize: '1.1rem', fontWeight: 800, color: '#fff', marginBottom: 6 }}>{s.title}</h3>
+                  <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.7rem', fontWeight: 800, color: '#f59e0b', letterSpacing: 2.2, marginBottom: 4 }}>STEP {s.num}</div>
+                  <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1.1rem', fontWeight: 800, color: '#fff', marginBottom: 6 }}>{s.title}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, fontFamily: 'Inter,sans-serif' }}>{s.desc}</p>
                 </div>
               </div>

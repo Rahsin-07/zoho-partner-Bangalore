@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-// Section 14, Book a Discovery Call with Arul Raj
+// Section 14 — Book a Discovery Call with Arul Raj
 const valueProps = [
   { icon: 'bi-check-circle-fill', color: '#fcd34d', text: '30 Minutes Free Consultation' },
   { icon: 'bi-check-circle-fill', color: '#fcd34d', text: '1 Call, Endless Solutions' },
@@ -41,8 +41,8 @@ export default function DiscoveryCall() {
 
       <div className="container position-relative">
         <div className="row align-items-center g-5">
-          {/* LEFT, copy + values */}
-          <div className="col-lg-6 fade-up zx-sl">
+          {/* LEFT — copy + values */}
+          <div className="col-lg-6 fade-up">
             <span style={{
               display: 'inline-flex', alignItems: 'center', gap: 10,
               fontSize: '0.72rem', fontWeight: 700, letterSpacing: '2.8px',
@@ -53,7 +53,7 @@ export default function DiscoveryCall() {
             </span>
 
             <h2 style={{
-              fontFamily: 'Inter,sans-serif',
+              fontFamily: 'inter Sans,sans-serif',
               fontSize: 'clamp(2rem, 4.2vw, 3.1rem)', fontWeight: 800,
               color: '#fff', marginBottom: 20, letterSpacing: '-0.022em', lineHeight: 1.1,
             }}>
@@ -69,7 +69,7 @@ export default function DiscoveryCall() {
               marginBottom: 28, lineHeight: 1.75, maxWidth: 540,
               fontFamily: 'Inter,sans-serif',
             }}>
-              <strong style={{ color: '#fff' }}>Marketing Automation & CRM Specialist</strong> · 14+ Years Experience · Ex Oracle, Ex Infosys. Personally handles every first call.
+              <strong style={{ color: '#fff' }}>Marketing Automation & CRM Specialist</strong> · 14+ Years Experience · Ex-Oracle, Ex-Infosys. Personally handles every first call.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 32 }}>
@@ -109,8 +109,8 @@ export default function DiscoveryCall() {
             </div>
           </div>
 
-          {/* RIGHT, Founder card */}
-          <div className="col-lg-6 fade-up zx-sr" style={{ transitionDelay: '0.15s' }}>
+          {/* RIGHT — Founder card */}
+          <div className="col-lg-6 fade-up" style={{ transitionDelay: '0.15s' }}>
             <div style={{
               background: '#f6f1ea', borderRadius: 28, padding: '42px 38px',
               boxShadow: '0 40px 100px rgba(0,0,0,0.45)',
@@ -125,7 +125,7 @@ export default function DiscoveryCall() {
                   width: 110, height: 110, borderRadius: '50%',
                   background: 'var(--grad-tri)',
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  color: '#fff', fontFamily: 'Inter,sans-serif',
+                  color: '#fff', fontFamily: 'inter Sans,sans-serif',
                   fontSize: '2.4rem', fontWeight: 800,
                   boxShadow: '0 18px 40px rgba(37,99,235,0.30)',
                   marginBottom: 16,
@@ -142,7 +142,7 @@ export default function DiscoveryCall() {
                     <i className="bi bi-patch-check-fill" style={{ color: '#2563eb', fontSize: '1.4rem' }} />
                   </div>
                 </div>
-                <h3 style={{ fontFamily: 'Inter,sans-serif', fontWeight: 800, fontSize: '1.4rem', color: '#0b1220', marginBottom: 4, letterSpacing: '-0.014em' }}>
+                <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontWeight: 800, fontSize: '1.4rem', color: '#0b1220', marginBottom: 4, letterSpacing: '-0.014em' }}>
                   Arul Raj
                 </h3>
                 <div style={{ fontSize: '0.86rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginBottom: 10 }}>
@@ -166,7 +166,7 @@ export default function DiscoveryCall() {
                     borderRight: i < arr.length - 1 ? '1px solid #e8e3dc' : 'none',
                   }}>
                     <div style={{
-                      fontFamily: 'Inter,sans-serif', fontWeight: 800,
+                      fontFamily: 'inter Sans,sans-serif', fontWeight: 800,
                       fontSize: '1.5rem', color: '#0b1220', lineHeight: 1,
                     }}>{cr.v}</div>
                     <div style={{ fontSize: '0.72rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginTop: 6 }}>{cr.l}</div>
