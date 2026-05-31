@@ -37,7 +37,7 @@ export default function DeveloperHire() {
               Every <a href="/zoho-customization-services" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'none' }}>customized Zoho app</a> we build starts with a clear scope, moves through structured development, and ends with thorough testing. No surprises mid-build. No rework after handover. A simple solution that your team can use from the start.
             </p>
 
-            <a href="#contact" className="btn-gradient ahover">
+            <a href ="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-gradient ahover">
               Hire a Zoho Developer in Bangalore Now <i className="bi bi-arrow-right" />
             </a>
           </div>

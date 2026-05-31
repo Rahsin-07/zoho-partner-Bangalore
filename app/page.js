@@ -47,7 +47,7 @@ export default function HomePage() {
         <Services />
         <Industries />
         <ZohoProducts />
-        <DeveloperHire />
+        {/* <DeveloperHire /> */}
         <CustomBuild />
         <CaseStudies />
         <Testimonials />
