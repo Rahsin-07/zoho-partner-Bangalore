@@ -5,18 +5,18 @@ import { useEffect, useRef } from 'react'
 const testimonials = [
   {
     color: '#2563eb',
-    quote: "We had three different freelancers running our Zoho before. None of them documented anything. ZoFlowX rebuilt the whole stack, handed us a playbook, and now my team actually knows where each report lives.",
-    name: 'Priya R.', role: 'Head of Ops · D2C brand, Bangalore', initial: 'PR', rating: 5,
+    quote: "We run a bike and car accessories shop and were looking for a better way to manage our billing and inventory. A friend suggested this team, and they walked us through Zoho Books and Zoho Inventory in a very simple way. They are one of the best Zoho partners we've come across. No technical terms, just practical solutions. Really happy with the support we received.",
+    name: 'Shijith V R', role: 'CEO - Kumari PitShop', initial: 'VR', rating: 5,
   },
   {
     color: '#dc2626',
-    quote: "I was sceptical about a managed service after our last partner ghosted us. ZoFlowX is the opposite, they reply same day, every change is logged, and our CFO can finally pull a clean P&L without IT in the loop.",
-    name: 'Daniel A.', role: 'CFO · Manufacturing exporter, Chennai', initial: 'DA', rating: 5,
+    quote: "Thanks a ton Mr. Arul & ZoFlowX team!! ZoFlowX sets a benchmark as one of the best Zoho partners in Chennai. Their expertise, strategic approach, and customer-first mindset make them a trusted Zoho consultant in Chennai. They go beyond implementation—offering insights, optimization, and scalable solutions tailored to business growth. For anyone seeking top-tier Zoho consultants in Chennai or a dependable Zoho partner in Chennai, ZoFlowX is an excellent choice.",
+    name: 'Sankara Subramanian A', role: 'Founder-TN Spaces', initial: 'SS', rating: 5,
   },
   {
     color: '#f59e0b',
-    quote: "The audit alone was worth the call. They found four broken workflows we didn't even know existed and showed us exactly how much time the team was losing every week. We signed the contract the same day.",
-    name: 'Anjali M.', role: 'Founder · SaaS startup, Bangalore', initial: 'AM', rating: 5,
+    quote: "We partnered with ZoFlowX at Cflow (Cavintek) for our Zoho CRM implementation, and the experience has been outstanding. The team at ZoFlowX listens, understands your exact requirement, and comes back with a better solution than what you asked for. The entire ZoFlowX team is proactive, reachable in real time, and genuinely invested in making things work. We went live within a week. Post-implementation support has been just as strong. Pricing is fair and transparent. If you're looking for a Zoho implementation partner who treats your business like their own, ZoFlowX is the one.",
+    name: 'Kishore PA', role: 'Cflow · Cavintek', initial: 'KP', rating: 5,
   },
 ]
 

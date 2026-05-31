@@ -181,7 +181,7 @@ export default function DiscoveryCall() {
                 fontFamily: 'Inter,sans-serif', lineHeight: 1.65,
                 position: 'relative',
               }}>
-                <i className="bi bi-quote" style={{ color: '#dc2626', fontSize: '1.8rem', position: 'absolute', top: -10, left: 14, background: '#fff', padding: '0 4px' }} />
+                {/* <i className="bi bi-quote" style={{ color: '#dc2626', fontSize: '1.8rem', position: 'absolute', top: -10, left: 14, background: '#fff', padding: '0 4px' }} /> */}
                 "I personally take every first call. No SDRs, no scripts. Just a clear conversation about what your business actually needs."
               </div>
             </div>
