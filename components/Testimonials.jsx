@@ -134,7 +134,7 @@ export default function Testimonials() {
           <p style={{ color: '#475569', fontFamily: 'Inter,sans-serif', fontSize: '0.96rem', marginBottom: 18 }}>
             Want to be our next success story?
           </p>
-          <a href="#contact" className="btn-primary-custom ahover">
+          <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-primary-custom ahover">
             Tell Us About Your Project <i className="bi bi-arrow-right" />
           </a>
         </div>

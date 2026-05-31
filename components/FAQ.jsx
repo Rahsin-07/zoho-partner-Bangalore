@@ -135,7 +135,7 @@ export default function FAQ() {
               <div style={{ fontSize: '0.92rem', color: '#475569', marginBottom: 14, fontFamily: 'Inter,sans-serif' }}>
                 Still have questions?
               </div>
-              <a href="#contact" className="btn-gradient ahover">
+              <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-gradient ahover">
                 Ask Us Directly <i className="bi bi-arrow-right" />
               </a>
             </div>

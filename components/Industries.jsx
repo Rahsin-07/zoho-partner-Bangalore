@@ -109,7 +109,7 @@ export default function Industries() {
         </div>
 
         <div className="fade-up text-center" style={{ marginTop: 48 }}>
-          <a href="#contact" className="btn-primary-custom ahover">
+          <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-primary-custom ahover">
             See How Zoho Works for Your Sector <i className="bi bi-arrow-right" />
           </a>
         </div>

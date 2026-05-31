@@ -97,6 +97,7 @@ export default function TrustedBrands() {
             }}
           >
             Brands That <span className="grad-blue-red">Trust Us</span>
+            <span style={{ color: '#0b1220', fontWeight: 800 }}> | ZoFlowX</span>
           </h2>
 
           <p

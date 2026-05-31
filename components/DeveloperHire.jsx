@@ -83,7 +83,7 @@ export default function DeveloperHire() {
               ))}
             </div>
 
-            <a href="#contact" className="btn-gradient ahover">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-gradient ahover">
               Hire a Zoho Developer Now <i className="bi bi-arrow-right" />
             </a>
           </div>

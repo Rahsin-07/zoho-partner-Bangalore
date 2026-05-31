@@ -78,7 +78,7 @@ export default function CustomBuild() {
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <a href="#contact" className="btn-accent ahover">
+              <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-accent ahover">
                 Build My Custom Zoho Solution <i className="bi bi-arrow-right" />
               </a>
             </div>

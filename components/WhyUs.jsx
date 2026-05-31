@@ -23,13 +23,6 @@ const reasons = [
   },
 ]
 
-const bullets = [
-  '15+ Zoho specialists on staff',
-  '15+ years of hands on experience',
-  '50+ implementations across India',
-  'Bangalore + Mumbai + Chennai + Hyderabad',
-]
-
 export default function WhyUs() {
   const ref = useRef(null)
   useEffect(() => {
@@ -55,27 +48,12 @@ export default function WhyUs() {
           <h2 className="section-title">
             Why Bangalore Businesses Choose <span className="grad-blue-red">ZoFlowX</span> as Their Zoho Partner
           </h2>
-          <p className="section-sub mx-auto" style={{ maxWidth: 780 }}>
-            We're not just familiar with Zoho, we know why most implementations fail and how yours can succeed. We don't just configure; we learn your business and build Zoho around it.
-          </p>
 
-          {/* Inline bullets */}
-          <div style={{
-            display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap',
-            marginTop: 28,
-          }}>
-            {bullets.map((b, i) => (
-              <div key={b} style={{
-                display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#fff', border: '1px solid #e8e3dc', borderRadius: 50,
-                padding: '8px 16px', fontSize: '0.82rem', fontWeight: 600,
-                color: '#334155', fontFamily: 'Inter,sans-serif',
-                boxShadow: '0 4px 12px rgba(11,18,32,0.04)',
-              }}>
-                <i className="bi bi-check-circle-fill" style={{ color: ['#2563eb', '#dc2626', '#f59e0b', '#2563eb'][i], fontSize: '0.9rem' }} />
-                {b}
-              </div>
-            ))}
+          <div style={{ maxWidth: 860, margin: '22px auto 0', textAlign: 'left' }}>
+            
+            <p style={{ fontSize: '1rem', color: '#475569', lineHeight: 1.78, fontFamily: 'Inter,sans-serif', marginBottom: 0 }}>
+              What makes ZoFlowX different? We're not just familiar with Zoho, we know why most implementations fail and how yours can succeed. We are your Authorized Zoho Partner in Bangalore and do more than just configure. We learn how your business operates, identify what is wrong and create a Zoho environment that is tailored to your specific requirements, rather than a template.
+            </p>
           </div>
         </div>
 

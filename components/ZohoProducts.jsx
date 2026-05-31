@@ -50,7 +50,7 @@ export default function ZohoProducts() {
             </p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0 d-none d-lg-block">
-            <a href="#contact" className="link-reveal">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="link-reveal">
               Help me pick the right app <i className="bi bi-arrow-right" />
             </a>
           </div>
@@ -118,7 +118,7 @@ export default function ZohoProducts() {
                   marginBottom: 12, fontFamily: 'Inter,sans-serif', flex: 1,
                 }}>{p.desc}</p>
 
-                <a href="#contact" className="pp-link" style={{
+                <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="pp-link" style={{
                   display: 'inline-flex', alignItems: 'center', gap: 6,
                   fontSize: '0.8rem', fontWeight: 700, color: '#0b1220',
                   textDecoration: 'none', fontFamily: 'Inter,sans-serif',
@@ -164,7 +164,7 @@ export default function ZohoProducts() {
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <a href="#contact" className="btn-gradient ahover">
+              <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-gradient ahover">
                 Help Me Pick the Right App <i className="bi bi-arrow-right" />
               </a>
             </div>

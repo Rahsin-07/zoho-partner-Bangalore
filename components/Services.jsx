@@ -116,7 +116,7 @@ function ServiceCard({ s, color, delay, dir }) {
           marginBottom: 22, fontFamily: 'Inter,sans-serif',
         }}>{s.desc}</p>
 
-        <a href="#contact" className="svc-cta" style={{
+        <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="svc-cta" style={{
           display: 'inline-flex', alignItems: 'center', gap: 8,
           fontSize: '0.86rem', fontWeight: 700, color: '#0b1220',
           textDecoration: 'none', fontFamily: 'Inter,sans-serif',
@@ -155,7 +155,7 @@ export default function Services() {
             </p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0 d-none d-lg-block">
-            <a href="#contact" className="link-reveal">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="link-reveal">
               Hire Certified Zoho Experts <i className="bi bi-arrow-right" />
             </a>
           </div>
@@ -200,7 +200,7 @@ export default function Services() {
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <a href="#contact" className="btn-accent ahover">
+              <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-accent ahover">
                 Hire Certified Zoho Experts <i className="bi bi-arrow-right" />
               </a>
             </div>

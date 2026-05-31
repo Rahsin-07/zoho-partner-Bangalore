@@ -116,7 +116,7 @@ export default function Navbar() {
               ['Solutions', '#services'],
               ['Products', '#'],
               ['Blogs', '#resources'],
-              ['Contact Us', '#consultation'],
+              ['Contact Us', '#get-in-touch'],
             ].map(([label, href]) => (
               <a
                 key={label}
@@ -288,7 +288,7 @@ export default function Navbar() {
               ['Case Studies', '#case-studies'],
               ['Solutions', '#services'],
               ['Blogs', '#resources'],
-              ['Contact Us', '#consultation'],
+              ['Contact Us', '#get-in-touch'],
             ].map(([label, href]) => (
               <a
                 key={label}
@@ -317,7 +317,7 @@ export default function Navbar() {
               }}
             >
               <a
-                href="#consultation"
+                href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation"
                 style={{
                   background:
                     'linear-gradient(90deg, #2563eb 0%, #eab308 48%, #f97316 72%, #ef4444 100%)',

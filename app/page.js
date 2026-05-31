@@ -12,7 +12,7 @@ import DeveloperHire from '@/components/DeveloperHire'
 import CustomBuild from '@/components/CustomBuild'
 import CaseStudies from '@/components/CaseStudies'
 import Testimonials from '@/components/Testimonials'
-import DiscoveryCall from '@/components/DiscoveryCall'
+import GetInTouch from '@/components/GetInTouch'
 import Resources from '@/components/Resources'
 import Contact from '@/components/Contact'
 import FAQ from '@/components/FAQ'
@@ -47,13 +47,14 @@ export default function HomePage() {
         <Services />
         <Industries />
         <ZohoProducts />
+         <Contact />
         {/* <DeveloperHire /> */}
         <CustomBuild />
         <CaseStudies />
         <Testimonials />
-        <DiscoveryCall />
+        {/* <DiscoveryCall /> */}
         <Resources />
-        <Contact />
+         <GetInTouch />
         <FAQ />
       </main>
       <Footer />

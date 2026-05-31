@@ -65,8 +65,8 @@ export default function Problem() {
           <h2 className="section-title">
             What Happens When Zoho <span className="grad-blue-red">Setup Goes Wrong</span>
           </h2>
-          <p className="section-sub mx-auto">
-            Most Zoho implementations fail not because of the platform, but because of how it's configured. Poor setup, missing automation, no team training, that's the real problem.
+       <p className="section-sub mx-auto" style={{ maxWidth: "1000px", textAlign: "justify" }}>
+            The majority of Zoho implementations are unsuccessful not because of the platform itself, but because of the way it is configured. The truth is that businesses don't see results because of poor configuration, lack of automation, and lack of training.
           </p>
         </div>
 
@@ -121,15 +121,7 @@ export default function Problem() {
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontSize: '1.4rem', transition: 'all 0.35s cubic-bezier(.2,.7,.2,1)', flexShrink: 0,
                   }}>
-                    <i className={`bi ${p.icon}`} />
-                  </div>
-                  <div style={{
-                    width: 28, height: 28, borderRadius: '50%',
-                    background: '#fee2e2', color: '#dc2626',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1rem', marginTop: 12, flexShrink: 0,
-                  }}>
-                    <i className="bi bi-x-lg" style={{ fontSize: '0.75rem' }} />
+                    <i className="bi bi-exclamation-triangle-fill" />
                   </div>
                 </div>
 
@@ -174,7 +166,7 @@ export default function Problem() {
                 Most businesses come to us after months of struggle with a Zoho setup that wasn't built for them. <strong style={{ color: '#0b1220' }}>We fix that.</strong> Book a free 30 minute audit and we'll show you exactly what's wrong and how to fix it.
               </div>
             </div>
-            <a href="#contact" className="btn-gradient ahover">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-gradient ahover">
               Book My Free 30 Min Audit <i className="bi bi-arrow-right" />
             </a>
           </div>

@@ -76,7 +76,7 @@ export default function CaseStudies() {
             </p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0 d-none d-lg-block">
-            <a href="#contact" className="link-reveal">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="link-reveal">
               Explore More Case Studies <i className="bi bi-arrow-right" />
             </a>
           </div>

@@ -138,22 +138,10 @@ export default function Journey() {
 
                 <p style={{
                   fontSize: '0.96rem', color: '#64748b', lineHeight: 1.72,
-                  marginBottom: 22, fontFamily: 'Inter,sans-serif', position: 'relative',
+                  marginBottom: 30, fontFamily: 'Inter,sans-serif', position: 'relative',
                 }}>{c.desc}</p>
 
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 26px 0', position: 'relative' }}>
-                  {c.points.map(p => (
-                    <li key={p} style={{
-                      display: 'flex', alignItems: 'flex-start', gap: 10, marginBottom: 10,
-                      fontSize: '0.9rem', color: '#334155', fontFamily: 'Inter,sans-serif', lineHeight: 1.6,
-                    }}>
-                      <i className="bi bi-check2-circle" style={{ color: c.color, fontSize: '1.05rem', marginTop: 1, flexShrink: 0, fontWeight: 800 }} />
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a href="#contact" className="j-cta ahover" style={{
+                <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="j-cta ahover" style={{
                   display: 'inline-flex', alignItems: 'center', gap: 8,
                   background: 'transparent', color: c.color,
                   border: `2px solid ${c.color}`,
