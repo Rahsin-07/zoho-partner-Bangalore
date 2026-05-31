@@ -203,7 +203,7 @@ export default function TrustedBrands() {
           {[
             { v: '50+', l: 'Zoho Implementations', c: '#2563eb' },
             { v: '15+', l: 'Years of Experience', c: '#dc2626' },
-            { v: '15+', l: 'Certified Specialists', c: '#f59e0b' },
+            { v: '100%', l: 'Client Satifaction', c: '#f59e0b' },
             { v: '20+', l: 'Industries Served', c: '#0b1220' },
           ].map((s, i, arr) => (
             <div

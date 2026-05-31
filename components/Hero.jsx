@@ -3,10 +3,9 @@ import { useEffect, useRef, useState, useCallback } from 'react'
 import MotionStyles from './MotionStyles'
 
 // Section 1 — Hero.
-// The slider now owns the headline. Slide 0 is the full-size brand hero
-// (big H1 + subtitle + CTA). Slides 1..N are the service intros, each with a
-// SMALL headline line pinned to the top and the service content below it.
-// Auto-advancing, no pause on hover, side arrows + dots.
+// Persistent brand headline pinned at the top. The slider below rotates
+// through the service intros, each shown as a numbered card (01 / …, 02 / …)
+// with tag, headline, copy and CTA. Auto-advancing, side arrows + dots.
 
 const services = [
   {
@@ -59,8 +58,8 @@ const services = [
   },
 ]
 
-// total slides = 1 hero + services
-const TOTAL = services.length + 1
+// total slides = one per service
+const TOTAL = services.length
 const HERO_ACCENT = '#2563eb'
 
 const moduleChips = [
@@ -71,22 +70,6 @@ const moduleChips = [
 ]
 
 const AUTOPLAY_MS = 4500
-
-// Reusable small headline used on the service slides (reduced + pinned top)
-function MiniHeadline() {
-  return (
-    <div style={{
-      fontFamily: 'Inter,sans-serif',
-      fontSize: 'clamp(2.25rem, 2.6vw, 1.65rem)',
-      fontWeight: 800, letterSpacing: '-0.012em', lineHeight: 1.25,
-      marginBottom: 26,
-    }}>
-      <span className="grad-blue-red">Zoho Authorized Partner</span>
-      <span style={{ color: '#0b1220' }}> in </span>
-      <span className="grad-red-yellow">Bangalore, India</span>
-    </div>
-  )
-}
 
 export default function Hero() {
   const ref = useRef(null)
@@ -111,9 +94,9 @@ export default function Hero() {
 
   const go = useCallback((i) => setActive((i + TOTAL) % TOTAL), [])
 
-  const isHero = active === 0
-  const service = isHero ? null : services[active - 1]
-  const accent = isHero ? HERO_ACCENT : service.color
+  const service = services[active]
+  const accent = service.color
+  const num = String(active + 1).padStart(2, '0')
 
   const arrowBtn = (dir) => ({
     width: 42, height: 42, borderRadius: '50%', flexShrink: 0,
@@ -144,39 +127,30 @@ export default function Hero() {
       <div aria-hidden style={{ position: 'absolute', width: 420, height: 420, top: '28%', right: '22%', background: 'radial-gradient(circle at center, rgba(220,38,38,0.12), transparent 60%)', animation: 'blob-drift 22s ease-in-out infinite', pointerEvents: 'none' }} />
       <div aria-hidden style={{ position: 'absolute', inset: 0, opacity: 0.45 }} className="dot-grid" />
 
-      {/* Floating chips (desktop only) */}
-      {/* <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        {moduleChips.map((c, i) => (
-          <div key={c.label} className="d-none d-xl-inline-flex"
-            style={{
-              position: 'absolute', left: c.x, top: c.y,
-              background: 'rgba(255,255,255,0.94)', backdropFilter: 'blur(8px)',
-              border: '1px solid #e8e3dc', borderRadius: 999, padding: '7px 14px',
-              fontSize: '0.78rem', fontFamily: 'Inter,sans-serif', fontWeight: 600,
-              color: '#334155', boxShadow: '0 10px 28px rgba(11,18,32,0.08)',
-              alignItems: 'center', gap: 8,
-              animation: `float-y ${5 + (i % 3) * 1.2}s ease-in-out ${c.delay}s infinite`,
-              whiteSpace: 'nowrap',
-            }}>
-            <i className={`bi ${c.icon}`} style={{ color: c.color, fontSize: '0.95rem' }} />
-            {c.label}
-          </div>
-        ))}
-      </div> */}
-
       <div className="container position-relative" style={{ zIndex: 2 }}>
 
-        {/* Persistent certified pill (kept above the slider) */}
-        <div className="fade-up zx-su" style={{ display: 'flex', justifyContent: 'center', marginBottom: 30 }}>
+        {/* Persistent certified pill */}
+        <div className="fade-up zx-su" style={{ display: 'flex', justifyContent: 'center', marginBottom: 26 }}>
           <div className="pill">
             <span className="pill-dot" />
             <span>Zoho Authorized Partner · Bangalore, India</span>
             <span style={{ width: 1, height: 14, background: '#e8e3dc' }} />
             <span style={{ color: '#2563eb', fontWeight: 700 }}>
-              <i className="bi bi-patch-check-fill" /> Certified
+              <i className="bi bi-patch-check-fill" /> 15+ Years
             </span>
           </div>
         </div>
+
+        {/* Persistent brand headline */}
+        <h1 className="fade-up" style={{
+          fontFamily: 'Inter,sans-serif',
+          fontSize: 'clamp(3.2rem, 3.2vw, 2.9rem)',
+          fontWeight: 800, color: '#0b1220', textAlign: 'center',
+          marginBottom: 36, letterSpacing: '-0.028em', lineHeight: 1.05,
+        }}>
+          <span className="grad-blue-red">Zoho Partner </span>
+           in <span className="grad-blue-red">Bangalore,India</span>
+        </h1>
 
         {/* SLIDER */}
         <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative', padding: '0 56px' }}>
@@ -190,69 +164,41 @@ export default function Hero() {
           </button>
 
           {/* Slide content (crossfade on change) */}
-          <div className="fade-up" style={{ minHeight: 340, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div className="fade-up" style={{ minHeight: 300, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
-            {isHero ? (
-              /* ---------- SLIDE 0: BRAND HERO ---------- */
-              <div key="hero" style={{ textAlign: 'center', width: '100%', animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
-                <h1 style={{
-                  fontFamily: 'Inter,sans-serif',
-                  fontSize: 'clamp(2.2rem, 5.2vw, 3.9rem)',
-                  fontWeight: 800, color: '#0b1220',
-                  marginBottom: 20, letterSpacing: '-0.028em', lineHeight: 1.05,
-                }}>
-                  <span className="grad-blue-red">Zoho Authorized Partner</span><br />
-                  in <span className="grad-red-yellow">Bangalore, India</span>
-                </h1>
+            <div key={active} style={{ textAlign: 'center', width: '100%', animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
 
-                <p style={{
-                  fontSize: '1.1rem', color: '#475569', maxWidth: 720,
-                  margin: '0 auto 28px', lineHeight: 1.7, fontFamily: 'Inter,sans-serif',
-                }}>
-                  ZoFlowX is your trusted Zoho Consulting Partner. We configure, customize, migrate and manage Zoho the right way for Bangalore businesses, so <strong style={{ color: '#0b1220' }}>every rupee of your subscription works for you.</strong>
-                </p>
+              {/* Numbered service tag */}
+              <span style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: `${service.color}15`, color: service.color,
+                fontSize: '0.7rem', fontWeight: 800, letterSpacing: 1.5,
+                textTransform: 'uppercase', padding: '6px 16px', borderRadius: 50,
+                marginBottom: 18, fontFamily: 'Inter,sans-serif',
+              }}>
+                <span style={{ opacity: 0.65 }}>{num}</span>
+                <span style={{ width: 1, height: 11, background: 'currentColor', opacity: 0.35 }} />
+                <i className={`bi ${service.icon}`} /> {service.tag}
+              </span>
 
-                <a href="#contact" className="btn-gradient ahover"
-                  style={{ padding: '0.9rem 1.95rem', fontSize: '0.95rem' }}>
-                  Book Your Free Zoho Audit <i className="bi bi-arrow-right" />
-                </a>
-              </div>
-            ) : (
-              /* ---------- SLIDES 1..N: SERVICE INTROS ---------- */
-              <div key={active} style={{ textAlign: 'center', width: '100%', animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
+              <h2 style={{
+                fontFamily: 'Inter,sans-serif',
+                fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 800,
+                color: '#0b1220', lineHeight: 1.2, letterSpacing: '-0.02em',
+                marginBottom: 16, maxWidth: 720, marginLeft: 'auto', marginRight: 'auto',
+              }}>{service.h}</h2>
 
-                {/* Reduced headline pinned to top */}
-                <MiniHeadline />
+              <p style={{
+                fontSize: '1.02rem', color: '#475569', lineHeight: 1.72,
+                marginBottom: 26, fontFamily: 'Inter,sans-serif',
+                maxWidth: 660, marginLeft: 'auto', marginRight: 'auto',
+              }}>{service.p}</p>
 
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 8,
-                  background: `${service.color}15`, color: service.color,
-                  fontSize: '0.7rem', fontWeight: 800, letterSpacing: 1.5,
-                  textTransform: 'uppercase', padding: '6px 16px', borderRadius: 50,
-                  marginBottom: 18, fontFamily: 'Inter,sans-serif',
-                }}>
-                  <i className={`bi ${service.icon}`} /> {service.tag}
-                </span>
-
-                <h2 style={{
-                  fontFamily: 'Inter,sans-serif',
-                  fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 800,
-                  color: '#0b1220', lineHeight: 1.2, letterSpacing: '-0.02em',
-                  marginBottom: 16, maxWidth: 720, marginLeft: 'auto', marginRight: 'auto',
-                }}>{service.h}</h2>
-
-                <p style={{
-                  fontSize: '1.02rem', color: '#475569', lineHeight: 1.72,
-                  marginBottom: 26, fontFamily: 'Inter,sans-serif',
-                  maxWidth: 660, marginLeft: 'auto', marginRight: 'auto',
-                }}>{service.p}</p>
-
-                <a href="#contact" className="btn-gradient ahover"
-                  style={{ padding: '0.9rem 1.95rem', fontSize: '0.95rem' }}>
-                  {service.cta} <i className="bi bi-arrow-right" />
-                </a>
-              </div>
-            )}
+              <a href="#contact" className="btn-gradient ahover"
+                style={{ padding: '0.9rem 1.95rem', fontSize: '0.95rem' }}>
+                {service.cta} <i className="bi bi-arrow-right" />
+              </a>
+            </div>
           </div>
 
           {/* Next arrow */}
@@ -267,7 +213,7 @@ export default function Hero() {
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 9, marginTop: 30 }}>
             {Array.from({ length: TOTAL }).map((_, i) => {
               const isActive = i === active
-              const dotColor = i === 0 ? HERO_ACCENT : services[i - 1].color
+              const dotColor = services[i].color
               return (
                 <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
                   style={{
@@ -281,8 +227,30 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* Trust / rating row */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 40 }}>
+          <div style={{ display: 'flex' }}>
+            {[{ i: 'SV', c: '#2563eb' }, { i: 'SS', c: '#dc2626' }, { i: 'KP', c: '#f59e0b' }].map((av, i) => (
+              <span key={av.i} style={{
+                width: 36, height: 36, borderRadius: '50%', background: av.c,
+                color: '#fff', fontSize: '0.72rem', fontWeight: 700,
+                fontFamily: 'Inter,sans-serif', display: 'flex',
+                alignItems: 'center', justifyContent: 'center',
+                border: '2px solid #fff', marginLeft: i === 0 ? 0 : -10,
+                boxShadow: '0 4px 12px rgba(11,18,32,0.12)',
+              }}>{av.i}</span>
+            ))}
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ display: 'inline-flex', gap: 2, color: '#f59e0b' }}>
+              {[...Array(5)].map((_, i) => <i key={i} className="bi bi-star-fill" style={{ fontSize: '0.92rem' }} />)}
+            </span>
+            <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, color: '#0b1220', fontSize: '0.95rem' }}>5/5</span>
+          </div>
+        </div>
+
         {/* Persistent contact quick actions */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginTop: 40 }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginTop: 22 }}>
           {[
             { label: 'Call',      icon: 'bi-telephone',      href: 'tel:+918190009222' },
             { label: 'WhatsApp',  icon: 'bi-whatsapp',       href: 'https://wa.me/918190009222', accent: '#16a34a' },
@@ -317,31 +285,6 @@ export default function Hero() {
               {a.label}
             </a>
           ))}
-        </div>
-
-        {/* Trust / rating row */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 22 }}>
-          <div style={{ display: 'flex' }}>
-            {[{ i: 'SV', c: '#2563eb' }, { i: 'SS', c: '#dc2626' }, { i: 'KP', c: '#f59e0b' }].map((av, i) => (
-              <span key={av.i} style={{
-                width: 36, height: 36, borderRadius: '50%', background: av.c,
-                color: '#fff', fontSize: '0.72rem', fontWeight: 700,
-                fontFamily: 'Inter,sans-serif', display: 'flex',
-                alignItems: 'center', justifyContent: 'center',
-                border: '2px solid #fff', marginLeft: i === 0 ? 0 : -10,
-                boxShadow: '0 4px 12px rgba(11,18,32,0.12)',
-              }}>{av.i}</span>
-            ))}
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ display: 'inline-flex', gap: 2, color: '#f59e0b' }}>
-              {[...Array(5)].map((_, i) => <i key={i} className="bi bi-star-fill" style={{ fontSize: '0.92rem' }} />)}
-            </span>
-            <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, color: '#0b1220', fontSize: '0.95rem' }}>5/5</span>
-            {/* <span style={{ fontFamily: 'Inter,sans-serif', color: '#64748b', fontSize: '0.88rem' }}>
-              Trusted by Bangalore businesses
-            </span> */}
-          </div>
         </div>
       </div>
     </section>

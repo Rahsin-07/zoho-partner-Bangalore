@@ -47,7 +47,7 @@ export default function Testimonials() {
             <span className="section-label section-label-yellow">Testimonials</span>
           </div>
           <h2 className="section-title">
-            Voices of Our <span className="grad-red-yellow">Happy Customers</span>
+            Voices of Our <span className="grad-blue-red">Happy Customers</span>
           </h2>
           <p className="section-sub mx-auto">
             Genuine results shared by real businesses, discover why companies across India consistently choose ZoFlowX as their authorized Zoho Partner.

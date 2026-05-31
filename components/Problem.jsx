@@ -63,7 +63,7 @@ export default function Problem() {
             <span className="section-label">Common problems</span>
           </div>
           <h2 className="section-title">
-            What Happens When Zoho <span className="grad-red-yellow">Setup Goes Wrong</span>
+            What Happens When Zoho <span className="grad-blue-red">Setup Goes Wrong</span>
           </h2>
           <p className="section-sub mx-auto">
             Most Zoho implementations fail not because of the platform, but because of how it's configured. Poor setup, missing automation, no team training, that's the real problem.

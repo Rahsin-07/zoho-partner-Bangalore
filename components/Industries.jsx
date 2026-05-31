@@ -44,7 +44,7 @@ export default function Industries() {
             <span className="section-label section-label-yellow">Industries</span>
           </div>
           <h2 className="section-title">
-            Business Sectors We Serve as a Trusted <span className="grad-red-yellow">Zoho Partner in Bangalore</span>
+            Business Sectors We Serve as a Trusted <span className="grad-blue-red">Zoho Partner in Bangalore</span>
           </h2>
           <p className="section-sub mx-auto">
             Whether it's a SaaS startup, an IT company, a D2C brand, a manufacturer, or an EdTech company, Bangalore businesses move fast. Every sector is unique, and so is every Zoho setup we deliver.

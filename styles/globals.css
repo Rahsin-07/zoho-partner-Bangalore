@@ -65,7 +65,7 @@
   --grad-tri-soft: linear-gradient(95deg, #2563eb22 0%, #dc262622 55%, #f59e0b22 100%);
   --grad-tri-vivid: linear-gradient(95deg, #3b82f6 0%, #ef4444 55%, #fbbf24 100%);
   --grad-blue-red: linear-gradient(95deg, #2563eb, #dc2626);
-  --grad-red-yellow: linear-gradient(95deg, #dc2626, #f59e0b);
+  --grad-blue-red: linear-gradient(95deg, #dc2626, #f59e0b);
   --grad-blue-yellow: linear-gradient(95deg, #2563eb, #f59e0b);
   --grad-deep: linear-gradient(135deg, #0b1220 0%, #1e3a8a 60%, #2563eb 100%);
   --grad-night: linear-gradient(135deg, #0b1220 0%, #131c30 50%, #1e3a8a 100%);
@@ -99,7 +99,7 @@ p { font-family: var(--font-body); font-weight: 400; line-height: 1.75; color: v
 /* ── GRADIENT TEXT ── */
 .grad-tri-text { background: var(--grad-tri); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .grad-blue-red { background: var(--grad-blue-red); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-.grad-red-yellow { background: var(--grad-red-yellow); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.grad-blue-red { background: var(--grad-blue-red); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .grad-blue-yellow { background: var(--grad-blue-yellow); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .grad-num { background: var(--grad-tri); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-family:var(--font-head); font-weight:800; }
 
@@ -407,4 +407,12 @@ textarea.zfx-input { min-height: 120px; resize: vertical; }
 @media (max-width: 768px) {
   section { padding: 72px 0; }
   .section-title { letter-spacing: -0.012em; }
+}
+/* Force the blue→red gradient regardless of other definitions */
+.grad-blue-red {
+  background: linear-gradient(95deg, #2563eb, #dc2626) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
 }

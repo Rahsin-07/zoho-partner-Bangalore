@@ -42,7 +42,7 @@ export default function Resources() {
           <div className="col-lg-8">
             <div className="section-label">Resources</div>
             <h2 className="section-title">
-              Zoho Tips, Guides and <span className="grad-blue-yellow">Expert Resources</span>
+              Zoho Tips, Guides and <span className="grad-blue-red">Expert Resources</span>
             </h2>
             <p className="section-sub">
               Keep your Zoho knowledge sharp with tutorials, best practices and actionable insights from India's trusted Zoho Partner, no SEO fluff, no chatbot ghost writing.
