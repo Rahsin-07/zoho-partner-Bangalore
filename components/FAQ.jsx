@@ -79,7 +79,7 @@ export default function FAQ() {
                       onMouseEnter={e => { if (!isOpen) e.currentTarget.style.color = '#2563eb' }}
                       onMouseLeave={e => { if (!isOpen) e.currentTarget.style.color = '#0b1220' }}
                     >
-                     <h3 style={{ flex: 1 }}>
+                    <h3 style={{ flex: 1, fontSize: "1rem" }}>
   {faq.q}
 </h3>
                       <div style={{
