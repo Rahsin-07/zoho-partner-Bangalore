@@ -212,16 +212,17 @@ export default function WhyUs() {
       color: '#64748b',
       lineHeight: 1.8,
       margin: 0,
+      textAlign:"justify"
     }}
   >
     ZoFlowX is a certified Zoho Authorized Partner and Zoho Managed Service Provider
     headquartered in Tirunelveli, India, with a dedicated team of 15+ Zoho specialists.
     With over 15 years of experience and 50+ successful Zoho implementations delivered
-    across India, we bring deep hands-on expertise across the complete Zoho product suite.
+    across India, we bring deep hands-on expertise across the complete Zoho product suite.<br></br> <br></br>
     We have worked with businesses of all sizes and industry segments throughout India 
     from startups to enterprises. Our Bangalore team serves businesses across Whitefield,
     Koramangala, Electronic City, Indiranagar and HSR Layout, as well as Mumbai, Chennai,
-    Hyderabad, Delhi and Pune, and remotely across India. We're not just familiar with
+    Hyderabad, Delhi and Pune, and remotely across India.<br></br>  <br></br>We're not just familiar with
     Zoho we know why most implementations fail and how yours can succeed. As your{' '}
     <strong style={{ color: '#0b1220', fontWeight: 600 }}>
       Authorized Zoho Partner in Bangalore
