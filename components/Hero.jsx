@@ -2,12 +2,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
 import MotionStyles from './MotionStyles'
 
-// Section 1 — Hero.
-// Persistent brand headline pinned at the top. A 6-slide slider rotates through
-// the service intros — each shown as a two-column slide (copy left, visual right).
-// To use a real photo/GIF for a slide, set its `img` field to an asset path
-// (e.g. img: '/hero/slide-1.png'); the SVG illustration is the fallback.
-
 const BOOKING = 'https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation'
 
 const services = [
@@ -70,7 +64,6 @@ const services = [
 const TOTAL = services.length
 const AUTOPLAY_MS = 4500
 
-// Branded SVG illustration per slide. Shared frame keeps all 6 cohesive.
 function SlideArt({ index, color }) {
   const frame = (children) => (
     <svg viewBox="0 0 460 360" role="img" aria-hidden
@@ -87,7 +80,7 @@ function SlideArt({ index, color }) {
   )
 
   switch (index) {
-    case 0: // Consulting — growth dashboard + rocket
+    case 0:
       return frame(<g>
         <rect x="40" y="86" width="240" height="220" rx="16" fill="#f5f8ff" stroke="#dbeafe" />
         {[{x:70,h:70},{x:118,h:110},{x:166,h:90},{x:214,h:150}].map((b,i)=>(
@@ -100,20 +93,20 @@ function SlideArt({ index, color }) {
           <path d="M8 80 l-14 26 l24 -10 Z" fill="#f59e0b" />
         </g>
       </g>)
-    case 1: // Custom solutions — modular blocks + sliders
+    case 1:
       return frame(<g>
         {[[60,90,'#2563eb'],[170,90,'#dc2626'],[280,90,'#f59e0b'],[60,190,'#f59e0b'],[170,190,'#2563eb']].map((b,i)=>(
           <rect key={i} x={b[0]} y={b[1]} width="90" height="80" rx="14" fill={`${b[2]}14`} stroke={b[2]} />
         ))}
         <rect x="280" y="190" width="90" height="80" rx="14" fill="#fff" stroke="#cbd5e1" strokeDasharray="6 6" />
         <text x="325" y="237" textAnchor="middle" fontSize="34" fill="#94a3b8" fontFamily="Inter,sans-serif">+</text>
-        <g transform="translate(0 0)">
+        <g>
           <line x1="60" y1="306" x2="370" y2="306" stroke="#e8e3dc" strokeWidth="4" strokeLinecap="round" />
           <circle cx="150" cy="306" r="9" fill="#2563eb" />
           <circle cx="260" cy="306" r="9" fill="#dc2626" />
         </g>
       </g>)
-    case 2: // Migration & integration — two systems syncing
+    case 2:
       return frame(<g>
         <rect x="46" y="120" width="120" height="150" rx="16" fill="#f5f8ff" stroke="#dbeafe" />
         <rect x="294" y="120" width="120" height="150" rx="16" fill="#fef6f0" stroke="#fed7aa" />
@@ -129,7 +122,7 @@ function SlideArt({ index, color }) {
         <path d="M230 178 a12 12 0 1 1 -10 6" fill="none" stroke="#dc2626" strokeWidth="3" strokeLinecap="round" />
         <path d="M220 184 l-2 8 l8 -2 Z" fill="#dc2626" />
       </g>)
-    case 3: // Analytics — dashboard with gauge + charts
+    case 3:
       return frame(<g>
         <rect x="40" y="86" width="180" height="120" rx="14" fill="#f5f8ff" stroke="#dbeafe" />
         <path d="M70 176 a40 40 0 0 1 80 0" fill="none" stroke="#e2e8f0" strokeWidth="12" />
@@ -148,7 +141,7 @@ function SlideArt({ index, color }) {
           </g>
         ))}
       </g>)
-    case 4: // CRM — sales pipeline / funnel
+    case 4:
       return frame(<g>
         {[[70,'#2563eb',300],[110,'#dc2626',230],[150,'#f59e0b',160],[190,'#1e3a8a',90]].map((s,i)=>(
           <g key={i}>
@@ -167,7 +160,7 @@ function SlideArt({ index, color }) {
           </g>
         ))}
       </g>)
-    default: // Developer — code window + gear
+    default:
       return frame(<g>
         <rect x="46" y="80" width="300" height="200" rx="14" fill="#0b1220" />
         <rect x="46" y="80" width="300" height="28" rx="14" fill="#1a2236" />
@@ -261,157 +254,152 @@ export default function Hero() {
            in <span className="grad-blue-red">Bangalore, India</span>
         </h1>
 
-        {/* ── Unified wrapper: slider + trust row + buttons all share the same left edge ── */}
-        <div style={{ maxWidth: 1080, margin: '0 auto' }}>
+        {/* SLIDER — no extra wrapper, sits directly inside .container */}
+        <div style={{ position: 'relative' }}>
+          <div key={active} className="row align-items-center g-4 g-lg-5" style={{ minHeight: 240, animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
 
-          {/* SLIDER */}
-          <div style={{ position: 'relative' }}>
-            <div key={active} className="row align-items-center g-4 g-lg-5" style={{ minHeight: 240, animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
-              {/* LEFT — copy */}
-              <div className="col-lg-6">
-                <span style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 8,
-                  background: `${service.color}15`, color: service.color,
-                  fontSize: '0.7rem', fontWeight: 800, letterSpacing: 1.5,
-                  textTransform: 'uppercase', padding: '6px 16px', borderRadius: 50,
-                  marginBottom: 18, fontFamily: 'Inter,sans-serif',
-                }}>
-                  <span style={{ opacity: 0.65 }}>{num}</span>
-                  <span style={{ width: 1, height: 11, background: 'currentColor', opacity: 0.35 }} />
-                  <i className={`bi ${service.icon}`} /> {service.tag}
-                </span>
-
-                <h2
-                  style={{
-                    fontFamily: 'Inter,sans-serif',
-                    fontSize: '48px',
-                    fontWeight: 700,
-                    color: '#0b1220',
-                    lineHeight: 1.2,
-                    letterSpacing: '-0.02em',
-                    marginBottom: 16,
-                  }}
-                  dangerouslySetInnerHTML={{ __html: service.h }}
-                />
-
-                <p style={{
-                  fontSize: '1.02rem', color: '#475569', lineHeight: 1.72,
-                  marginBottom: 26, fontFamily: 'Inter,sans-serif',
-                }}>{service.p}</p>
-
-                <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-gradient ahover"
-                  style={{ padding: '0.9rem 1.95rem', fontSize: '0.95rem' }}>
-                  {service.cta} <i className="bi bi-arrow-right" />
-                </a>
-              </div>
-
-              {/* RIGHT — visual (image if provided, else SVG illustration) */}
-              <div className="col-lg-6">
-                {service.img ? (
-                  <img src={service.img} alt={service.h}
-                    style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 24, border: '1px solid #e8e3dc', boxShadow: '0 30px 80px rgba(11,18,32,0.10)' }} />
-                ) : (
-                  <div style={{ filter: 'drop-shadow(0 30px 60px rgba(11,18,32,0.07))', opacity: 0.96 }}>
-                    <SlideArt index={active} color={accent} />
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Controls — dots (left) + arrows (right) */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginTop: 20 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-                {Array.from({ length: TOTAL }).map((_, i) => {
-                  const isActive = i === active
-                  return (
-                    <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
-                      style={{
-                        height: 9, width: isActive ? 34 : 9, borderRadius: 50,
-                        border: 'none', padding: 0, cursor: 'pointer',
-                        background: isActive ? services[i].color : '#d9d3ca',
-                        transition: 'width 0.4s cubic-bezier(.2,.7,.2,1), background 0.3s',
-                      }} />
-                  )
-                })}
-              </div>
-              <div style={{ display: 'flex', gap: 10 }}>
-                <button onClick={() => go(active - 1)} aria-label="Previous slide" style={arrowBtn}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dc'; e.currentTarget.style.color = '#0b1220' }}>
-                  <i className="bi bi-chevron-left" />
-                </button>
-                <button onClick={() => go(active + 1)} aria-label="Next slide" style={arrowBtn}
-                  onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dc'; e.currentTarget.style.color = '#0b1220' }}>
-                  <i className="bi bi-chevron-right" />
-                </button>
-              </div>
-            </div>
-          </div>
-          {/* END SLIDER */}
-
-          {/* Trust / rating row — now inside unified wrapper, aligns with slide copy */}
-          <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 24 }}>
-            <div style={{ display: 'flex' }}>
-              {[{ i: 'SV', c: '#2563eb' }, { i: 'SS', c: '#dc2626' }, { i: 'KP', c: '#f59e0b' }].map((av, i) => (
-                <span key={av.i} style={{
-                  width: 36, height: 36, borderRadius: '50%', background: av.c,
-                  color: '#fff', fontSize: '0.72rem', fontWeight: 700,
-                  fontFamily: 'Inter,sans-serif', display: 'flex',
-                  alignItems: 'center', justifyContent: 'center',
-                  border: '2px solid #fff', marginLeft: i === 0 ? 0 : -10,
-                  boxShadow: '0 4px 12px rgba(11,18,32,0.12)',
-                }}>{av.i}</span>
-              ))}
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <span style={{ display: 'inline-flex', gap: 2, color: '#f59e0b' }}>
-                {[...Array(5)].map((_, i) => <i key={i} className="bi bi-star-fill" style={{ fontSize: '0.92rem' }} />)}
+            {/* LEFT — copy */}
+            <div className="col-lg-6">
+              <span style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: `${service.color}15`, color: service.color,
+                fontSize: '0.7rem', fontWeight: 800, letterSpacing: 1.5,
+                textTransform: 'uppercase', padding: '6px 16px', borderRadius: 50,
+                marginBottom: 18, fontFamily: 'Inter,sans-serif',
+              }}>
+                <span style={{ opacity: 0.65 }}>{num}</span>
+                <span style={{ width: 1, height: 11, background: 'currentColor', opacity: 0.35 }} />
+                <i className={`bi ${service.icon}`} /> {service.tag}
               </span>
-              <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, color: '#0b1220', fontSize: '0.95rem' }}>5/5</span>
+
+              <h2
+                style={{
+                  fontFamily: 'Inter,sans-serif',
+                  fontSize: 'clamp(1.6rem, 3.2vw, 2.6rem)',
+                  fontWeight: 700,
+                  color: '#0b1220',
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.02em',
+                  marginBottom: 16,
+                }}
+                dangerouslySetInnerHTML={{ __html: service.h }}
+              />
+
+              <p style={{
+                fontSize: '1.02rem', color: '#475569', lineHeight: 1.72,
+                marginBottom: 26, fontFamily: 'Inter,sans-serif',
+              }}>{service.p}</p>
+
+              <a href={BOOKING} target="_blank" rel="noopener noreferrer" className="btn-gradient ahover"
+                style={{ padding: '0.9rem 1.95rem', fontSize: '0.95rem' }}>
+                {service.cta} <i className="bi bi-arrow-right" />
+              </a>
+            </div>
+
+            {/* RIGHT — visual */}
+            <div className="col-lg-6">
+              {service.img ? (
+                <img src={service.img} alt={service.h}
+                  style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 24, border: '1px solid #e8e3dc', boxShadow: '0 30px 80px rgba(11,18,32,0.10)' }} />
+              ) : (
+                <div style={{ filter: 'drop-shadow(0 30px 60px rgba(11,18,32,0.07))', opacity: 0.96 }}>
+                  <SlideArt index={active} color={accent} />
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Persistent contact quick actions — now inside unified wrapper, aligns with slide copy */}
-          <div style={{ display: 'flex', justifyContent: 'flex-start', gap: 10, flexWrap: 'wrap', marginTop: 14 }}>
-            {[
-              { label: 'Call',      icon: 'bi-telephone',      href: 'tel:+918190009222' },
-              { label: 'WhatsApp',  icon: 'bi-whatsapp',       href: 'https://wa.me/918190009222', accent: '#16a34a' },
-              { label: 'Email',     icon: 'bi-envelope',       href: 'mailto:info@zoflowx.com' },
-              { label: 'Schedule',  icon: 'bi-calendar-check', href: BOOKING },
-              { label: 'Live Chat', icon: 'bi-chat-dots-fill',  href: '#chat', accent: '#7c3aed' }
-            ].map(a => (
-              <a key={a.label} href={a.href}
-                target={a.href.startsWith('http') ? '_blank' : undefined}
-                rel={a.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 8,
-                  background: '#fff', border: '1px solid #e8e3dc', borderRadius: 50,
-                  padding: '6px 14px', fontSize: '0.86rem', fontWeight: 600,
-                  fontFamily: 'Inter,sans-serif', color: '#334155', textDecoration: 'none',
-                  transition: 'all 0.25s cubic-bezier(.2,.7,.2,1)', cursor: 'pointer',
-                }}
-                onMouseEnter={e => {
-                  const col = a.accent || '#2563eb'
-                  e.currentTarget.style.borderColor = col
-                  e.currentTarget.style.color = col
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.boxShadow = '0 10px 24px rgba(11,18,32,0.08)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = '#e8e3dc'
-                  e.currentTarget.style.color = '#334155'
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = 'none'
-                }}>
-                <i className={`bi ${a.icon}`} style={{ color: a.accent || '#2563eb', fontSize: '0.98rem' }} />
-                {a.label}
-              </a>
+          {/* Controls — dots (left) + arrows (right) */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginTop: 20 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+              {Array.from({ length: TOTAL }).map((_, i) => {
+                const isActive = i === active
+                return (
+                  <button key={i} onClick={() => go(i)} aria-label={`Go to slide ${i + 1}`}
+                    style={{
+                      height: 9, width: isActive ? 34 : 9, borderRadius: 50,
+                      border: 'none', padding: 0, cursor: 'pointer',
+                      background: isActive ? services[i].color : '#d9d3ca',
+                      transition: 'width 0.4s cubic-bezier(.2,.7,.2,1), background 0.3s',
+                    }} />
+                )
+              })}
+            </div>
+            <div style={{ display: 'flex', gap: 10 }}>
+              <button onClick={() => go(active - 1)} aria-label="Previous slide" style={arrowBtn}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dc'; e.currentTarget.style.color = '#0b1220' }}>
+                <i className="bi bi-chevron-left" />
+              </button>
+              <button onClick={() => go(active + 1)} aria-label="Next slide" style={arrowBtn}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = accent; e.currentTarget.style.color = accent }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dc'; e.currentTarget.style.color = '#0b1220' }}>
+                <i className="bi bi-chevron-right" />
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* END SLIDER */}
+
+        {/* Trust / rating row */}
+        <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 24 }}>
+          <div style={{ display: 'flex' }}>
+            {[{ i: 'SV', c: '#2563eb' }, { i: 'SS', c: '#dc2626' }, { i: 'KP', c: '#f59e0b' }].map((av, i) => (
+              <span key={av.i} style={{
+                width: 36, height: 36, borderRadius: '50%', background: av.c,
+                color: '#fff', fontSize: '0.72rem', fontWeight: 700,
+                fontFamily: 'Inter,sans-serif', display: 'flex',
+                alignItems: 'center', justifyContent: 'center',
+                border: '2px solid #fff', marginLeft: i === 0 ? 0 : -10,
+                boxShadow: '0 4px 12px rgba(11,18,32,0.12)',
+              }}>{av.i}</span>
             ))}
           </div>
-
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ display: 'inline-flex', gap: 2, color: '#f59e0b' }}>
+              {[...Array(5)].map((_, i) => <i key={i} className="bi bi-star-fill" style={{ fontSize: '0.92rem' }} />)}
+            </span>
+            <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, color: '#0b1220', fontSize: '0.95rem' }}>5/5</span>
+          </div>
         </div>
-        {/* END unified wrapper */}
+
+        {/* Persistent contact quick actions */}
+        <div style={{ display: 'flex', justifyContent: 'flex-start', gap: 10, flexWrap: 'wrap', marginTop: 14 }}>
+          {[
+            { label: 'Call',      icon: 'bi-telephone',      href: 'tel:+918190009222' },
+            { label: 'WhatsApp',  icon: 'bi-whatsapp',       href: 'https://wa.me/918190009222', accent: '#16a34a' },
+            { label: 'Email',     icon: 'bi-envelope',       href: 'mailto:info@zoflowx.com' },
+            { label: 'Schedule',  icon: 'bi-calendar-check', href: BOOKING },
+            { label: 'Live Chat', icon: 'bi-chat-dots-fill',  href: '#chat', accent: '#7c3aed' }
+          ].map(a => (
+            <a key={a.label} href={a.href}
+              target={a.href.startsWith('http') ? '_blank' : undefined}
+              rel={a.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: '#fff', border: '1px solid #e8e3dc', borderRadius: 50,
+                padding: '6px 14px', fontSize: '0.86rem', fontWeight: 600,
+                fontFamily: 'Inter,sans-serif', color: '#334155', textDecoration: 'none',
+                transition: 'all 0.25s cubic-bezier(.2,.7,.2,1)', cursor: 'pointer',
+              }}
+              onMouseEnter={e => {
+                const col = a.accent || '#2563eb'
+                e.currentTarget.style.borderColor = col
+                e.currentTarget.style.color = col
+                e.currentTarget.style.transform = 'translateY(-2px)'
+                e.currentTarget.style.boxShadow = '0 10px 24px rgba(11,18,32,0.08)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = '#e8e3dc'
+                e.currentTarget.style.color = '#334155'
+                e.currentTarget.style.transform = 'translateY(0)'
+                e.currentTarget.style.boxShadow = 'none'
+              }}>
+              <i className={`bi ${a.icon}`} style={{ color: a.accent || '#2563eb', fontSize: '0.98rem' }} />
+              {a.label}
+            </a>
+          ))}
+        </div>
 
       </div>
     </section>

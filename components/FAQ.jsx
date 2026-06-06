@@ -79,7 +79,7 @@ export default function FAQ() {
                       onMouseEnter={e => { if (!isOpen) e.currentTarget.style.color = '#2563eb' }}
                       onMouseLeave={e => { if (!isOpen) e.currentTarget.style.color = '#0b1220' }}
                     >
-                    <h3 style={{ flex: 1, fontSize: "1rem" }}>
+                    <h3 style={{ flex: 1, fontSize: "18px", lineHeight:"28px"}}>
   {faq.q}
 </h3>
                       <div style={{
@@ -99,9 +99,9 @@ export default function FAQ() {
                       transition: 'max-height 0.45s ease',
                     }}>
                       <div style={{
-                        padding: '0 26px 24px 62px',
-                        fontSize: '0.93rem', color: '#475569',
-                        lineHeight: 1.75, fontFamily: 'Inter,sans-serif',
+                       padding: '0 26px 24px 26px',
+                        fontSize: '16px', color: '#475569',
+                        lineHeight: "27.2px", fontFamily: 'Inter,sans-serif',
                       }}>
                         {faq.a}
                       </div>
