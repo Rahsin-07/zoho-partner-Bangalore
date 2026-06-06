@@ -195,9 +195,7 @@ export default function Services() {
               }}>
                 Zoho works best when it's set up right. We make sure your business is never on the wrong side of that gap.
               </h3>
-              <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '0.96rem', marginBottom: 0, fontFamily: 'Inter,sans-serif' }}>
-                Implementation, customization, migration, app development and ongoing managed services, all under one Bangalore roof.
-              </p>
+             
             </div>
             <div className="col-lg-4 text-lg-end">
               <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" className="btn-accent ahover">

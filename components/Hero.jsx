@@ -13,7 +13,7 @@ const BOOKING = 'https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation'
 const services = [
   {
     tag: 'Zoho Consulting',
-    h: 'Subscribed to Zoho but not seeing growth?',
+    h: 'Subscribed to <span class="grad-blue-red">Zoho</span> but not seeing growth?',
     p: "The platform isn't the problem, the implementation is. As a Zoho Authorized Partner based in Bangalore, we help Bangalore businesses configure Zoho the right way so every rupee delivers real results.",
     cta: 'Connect with a Zoho Specialist',
     icon: 'bi-rocket-takeoff',
@@ -22,7 +22,7 @@ const services = [
   },
   {
     tag: 'Custom Zoho Solutions',
-    h: 'Looking for a Zoho Solution Built for Your Bangalore Business?',
+    h: 'Looking for a <span class="grad-blue-red">Custom Zoho</span> Solution Built for Your Bangalore Business?',
     p: 'As a certified Zoho customization partner in Bangalore, we build solutions that fit your exact process, from custom modules and automations to third party integrations. Nothing generic, everything yours.',
     cta: 'Design Your Custom Solution',
     icon: 'bi-sliders',
@@ -31,7 +31,7 @@ const services = [
   },
   {
     tag: 'Zoho Migration & Integration',
-    h: 'Planning a Zoho Migration or Integration?',
+    h: 'Planning a <span class="grad-blue-red">Zoho Migration</span> or Integration?',
     p: 'Switching to Zoho or need it synced with your website, ERP, or other platforms? We manage end to end Zoho migration and integration for Bangalore businesses, ensuring full data integrity and zero disruption.',
     cta: 'Begin Your Migration',
     icon: 'bi-arrow-left-right',
@@ -40,7 +40,7 @@ const services = [
   },
   {
     tag: 'Dedicated Zoho Analytics Expert',
-    h: "Can't get a clear picture of your business performance in one place?",
+    h: 'Can\'t get a <span class="grad-blue-red">clear picture</span> of your business performance in one place?',
     p: 'Work with a dedicated Zoho Analytics expert in Bangalore to build custom dashboards and tailored reports for your business, giving you live visibility into performance, sharper insights, and the confidence to act faster.',
     cta: 'Build My Custom Dashboard',
     icon: 'bi-bar-chart-line',
@@ -49,7 +49,7 @@ const services = [
   },
   {
     tag: 'Zoho CRM Implementation',
-    h: 'Want to see exactly how Zoho CRM can transform your Bangalore sales process?',
+    h: 'Want to see exactly how <span class="grad-blue-red">Zoho CRM</span> can transform your Bangalore sales process?',
     p: 'Most Bangalore businesses use Zoho CRM only to store contacts. As a Zoho CRM partner in Bangalore, we build intelligent pipelines, lead scoring systems, and sales automation that actively drive conversions, not just store data.',
     cta: 'Schedule a Live Demo',
     icon: 'bi-people-fill',
@@ -58,7 +58,7 @@ const services = [
   },
   {
     tag: 'Dedicated Zoho Developer',
-    h: 'Need a Dedicated Zoho Developer Focused Entirely on Your Business?',
+    h: 'Need a <span class="grad-blue-red">Dedicated Zoho</span> Developer Focused Entirely on Your Business?',
     p: 'New Zoho requirements coming in every week? Rather than outsourcing each task separately, hire a dedicated Zoho developer in Bangalore who works exclusively for your business, on demand, consistent, and fully committed.',
     cta: 'Hire a Zoho Developer',
     icon: 'bi-code-square',
@@ -80,7 +80,7 @@ function SlideArt({ index, color }) {
           <stop offset="0" stopColor="#2563eb" /><stop offset="0.55" stopColor="#dc2626" /><stop offset="1" stopColor="#f59e0b" />
         </linearGradient>
       </defs>
-      <rect x="14" y="14" width="432" height="332" rx="24" fill="#ffffff" stroke="#e8e3dc" />
+<rect x="14" y="14" width="432" height="332" rx="24" fill="#f5f0e8" stroke="#e0d9ce" /> 
       <rect x="40" y="40" width="120" height="6" rx="3" fill={`url(#hbar-${index})`} />
       {children}
     </svg>
@@ -223,8 +223,8 @@ export default function Hero() {
 
   return (
     <section id="hero" ref={ref} style={{
-      background: 'linear-gradient(160deg, #fafaf7 0%, #f0ece5 100%)',
-      padding: '96px 0 92px', position: 'relative', overflow: 'hidden',
+background: 'linear-gradient(160deg, #fffcf0 0%, #fff4d6 100%)',
+      padding: '48px 0 48px', position: 'relative', overflow: 'hidden',
     }}>
       <MotionStyles />
       <style>{`
@@ -255,7 +255,7 @@ export default function Hero() {
           fontFamily: 'Inter,sans-serif',
           fontSize: 'clamp(2.4rem, 5vw, 3.2rem)',
           fontWeight: 800, color: '#0b1220', textAlign: 'center',
-          marginBottom: 44, letterSpacing: '-0.028em', lineHeight: 1.05,
+          marginBottom: 24, letterSpacing: '-0.028em', lineHeight: 1.05,
         }}>
           <span className="grad-blue-red">Zoho Partner </span>
            in <span className="grad-blue-red">Bangalore, India</span>
@@ -263,7 +263,7 @@ export default function Hero() {
 
         {/* SLIDER — two columns */}
         <div style={{ maxWidth: 1080, margin: '0 auto', position: 'relative' }}>
-          <div key={active} className="row align-items-center g-4 g-lg-5" style={{ minHeight: 320, animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
+          <div key={active} className="row align-items-center g-4 g-lg-5" style={{ minHeight: 240, animation: 'zx-slide-in 0.55s var(--ease-out)' }}>
             {/* LEFT — copy */}
             <div className="col-lg-6">
               <span style={{
@@ -278,12 +278,18 @@ export default function Hero() {
                 <i className={`bi ${service.icon}`} /> {service.tag}
               </span>
 
-              <h2 style={{
-                fontFamily: 'Inter,sans-serif',
-                fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 800,
-                color: '#0b1220', lineHeight: 1.2, letterSpacing: '-0.02em',
-                marginBottom: 16,
-              }}>{service.h}</h2>
+             <h2
+  style={{
+    fontFamily: 'Inter,sans-serif',
+    fontSize: '42px',
+    fontWeight: 700,
+    color: '#0b1220',
+    lineHeight: 1.2,
+    letterSpacing: '-0.02em',
+    marginBottom: 16,
+  }}
+  dangerouslySetInnerHTML={{ __html: service.h }}
+/>
 
               <p style={{
                 fontSize: '1.02rem', color: '#475569', lineHeight: 1.72,
@@ -302,7 +308,8 @@ export default function Hero() {
                 <img src={service.img} alt={service.h}
                   style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 24, border: '1px solid #e8e3dc', boxShadow: '0 30px 80px rgba(11,18,32,0.10)' }} />
               ) : (
-                <div style={{ filter: 'drop-shadow(0 30px 60px rgba(11,18,32,0.10))' }}>
+              
+<div style={{ filter: 'drop-shadow(0 30px 60px rgba(11,18,32,0.07))', opacity: 0.96 }}>
                   <SlideArt index={active} color={accent} />
                 </div>
               )}
@@ -310,7 +317,7 @@ export default function Hero() {
           </div>
 
           {/* Controls — dots (left) + arrows (right), as per reference */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginTop: 34 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginTop: 20 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
               {Array.from({ length: TOTAL }).map((_, i) => {
                 const isActive = i === active
@@ -341,7 +348,7 @@ export default function Hero() {
         </div>
 
         {/* Trust / rating row */}
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 46 }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 14, flexWrap: 'wrap', marginTop: 24 }}>
           <div style={{ display: 'flex' }}>
             {[{ i: 'SV', c: '#2563eb' }, { i: 'SS', c: '#dc2626' }, { i: 'KP', c: '#f59e0b' }].map((av, i) => (
               <span key={av.i} style={{
@@ -363,12 +370,13 @@ export default function Hero() {
         </div>
 
         {/* Persistent contact quick actions */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 10, flexWrap: 'wrap', marginTop: 22 }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', gap: 10, flexWrap: 'wrap', marginTop: 14 }}>
           {[
             { label: 'Call',      icon: 'bi-telephone',      href: 'tel:+918190009222' },
             { label: 'WhatsApp',  icon: 'bi-whatsapp',       href: 'https://wa.me/918190009222', accent: '#16a34a' },
             { label: 'Email',     icon: 'bi-envelope',       href: 'mailto:info@zoflowx.com' },
             { label: 'Schedule',  icon: 'bi-calendar-check', href: BOOKING },
+            { label: 'Live Chat', icon: 'bi-chat-dots-fill',  href: '#chat', accent: '#7c3aed' }
           ].map(a => (
             <a key={a.label} href={a.href}
               target={a.href.startsWith('http') ? '_blank' : undefined}
@@ -376,7 +384,7 @@ export default function Hero() {
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 50,
-                padding: '8px 18px', fontSize: '0.86rem', fontWeight: 600,
+                padding: '6px 14px', fontSize: '0.86rem', fontWeight: 600,
                 fontFamily: 'Inter,sans-serif', color: '#334155', textDecoration: 'none',
                 transition: 'all 0.25s cubic-bezier(.2,.7,.2,1)', cursor: 'pointer',
               }}

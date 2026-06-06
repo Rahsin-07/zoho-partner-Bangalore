@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const channels = [
   { icon: 'bi-whatsapp',   color: '#16a34a', label: 'WhatsApp', value: '+91 81900 09222', href: 'https://wa.me/918190009222', sub: 'Chat with our team' },
   { icon: 'bi-envelope',   color: '#2563eb', label: 'Email',    value: 'info@zoflowx.com', href: 'mailto:info@zoflowx.com',     sub: 'We reply within a day' },
-  { icon: 'bi-telephone',  color: '#dc2626', label: 'Call',     value: '+91 81900 09222', href: 'tel:+918190009222',           sub: 'Mon–Sat, 10am–7pm IST' },
+  { icon: 'bi-telephone',  color: '#dc2626', label: 'Call',     value: '+91 81900 09222', href: 'tel:+918190009222',           sub: 'Mon–Sat, 9am–11pm IST' },
 ]
 
 export default function GetInTouch() {

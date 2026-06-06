@@ -53,7 +53,7 @@ export default function Industries() {
 
         <div className="row g-3 g-md-4">
           {industries.map((ind, i) => (
-            <div key={ind.name} className={`col-6 col-md-4 col-lg-3 fade-up ${i % 2 ? 'zx-sr' : 'zx-sl'}`} style={{ transitionDelay: `${i * 0.03}s` }}>
+            <h3 key={ind.name} className={`col-6 col-md-4 col-lg-3 fade-up ${i % 2 ? 'zx-sr' : 'zx-sl'}`} style={{ transitionDelay: `${i * 0.03}s` }}>
               <div className="ind-card" style={{
                 background: '#fff', border: '1px solid #e8e3dc', borderRadius: 16,
                 padding: '24px 18px', height: '100%', textAlign: 'center',
@@ -104,7 +104,7 @@ export default function Industries() {
                   transition: 'color 0.3s', position: 'relative', zIndex: 1, lineHeight: 1.3,
                 }}>{ind.name}</div>
               </div>
-            </div>
+            </h3>
           ))}
         </div>
 

@@ -18,11 +18,7 @@ const faqs = [
   { q: 'How do I get started with ZoFlowX as my Zoho Partner in Bangalore?', a: 'Getting started is simple. Book a free 30 minute Zoho audit with ZoFlowX. Our Bangalore team will review your current setup, understand your business requirements, and give you a clear roadmap, with no obligation and no sales pressure.' },
 ]
 
-const relatedPages = [
-  { label: 'Zoho Partner in India',   href: '#' },
-  { label: 'Zoho Partner in Mumbai',  href: '#' },
-  { label: 'Zoho Partner in Chennai', href: '#' },
-]
+
 
 export default function FAQ() {
   const [open, setOpen] = useState(0)
@@ -48,9 +44,7 @@ export default function FAQ() {
           <h2 className="section-title">
             Frequently <span className="grad-blue-red">asked questions</span>
           </h2>
-          <p className="section-sub mx-auto" style={{ marginBottom: 6 }}>
-            Questions come up? Let's clear them.
-          </p>
+        
           <p className="section-sub mx-auto">
             Not sure about something? Here are clear answers to the questions most businesses ask before choosing Zoho.
           </p>
@@ -85,15 +79,9 @@ export default function FAQ() {
                       onMouseEnter={e => { if (!isOpen) e.currentTarget.style.color = '#2563eb' }}
                       onMouseLeave={e => { if (!isOpen) e.currentTarget.style.color = '#0b1220' }}
                     >
-                      <span style={{ display: 'flex', alignItems: 'center', gap: 14, flex: 1 }}>
-                        <span style={{
-                          fontFamily: 'Inter,sans-serif',
-                          fontSize: '0.78rem', fontWeight: 800,
-                          color: isOpen ? '#2563eb' : '#94a3b8',
-                          letterSpacing: 1, minWidth: 22,
-                        }}>{String(i + 1).padStart(2, '0')}</span>
-                        {faq.q}
-                      </span>
+                     <span style={{ flex: 1 }}>
+  {faq.q}
+</span>
                       <div style={{
                         width: 34, height: 34, borderRadius: '50%',
                         background: isOpen ? 'var(--grad-tri)' : '#f6f1ea',
@@ -140,49 +128,7 @@ export default function FAQ() {
               </a>
             </div>
 
-            {/* Related pages */}
-            <div className="fade-up" style={{ marginTop: 44 }}>
-              <h2 style={{
-                fontSize: '0.78rem', fontWeight: 700, color: '#64748b',
-                marginBottom: 16, fontFamily: 'Inter,sans-serif',
-                letterSpacing: 1.8, textTransform: 'uppercase',
-              }}>
-                Related Pages
-              </h2>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-                {relatedPages.map((page, i) => {
-                  const colors = ['#2563eb', '#dc2626', '#f59e0b']
-                  const c = colors[i % 3]
-                  return (
-                    <a key={page.label} href={page.href}
-                      style={{
-                        background: `${c}10`, color: c,
-                        padding: '10px 20px', borderRadius: 50,
-                        fontSize: '0.86rem', fontWeight: 700,
-                        textDecoration: 'none', transition: 'all 0.25s',
-                        fontFamily: 'Inter,sans-serif',
-                        display: 'inline-flex', alignItems: 'center', gap: 6,
-                        border: `1px solid ${c}30`,
-                      }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.background = c
-                        e.currentTarget.style.color = '#fff'
-                        e.currentTarget.style.transform = 'translateY(-2px)'
-                        e.currentTarget.style.boxShadow = `0 10px 22px ${c}55`
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.background = `${c}10`
-                        e.currentTarget.style.color = c
-                        e.currentTarget.style.transform = ''
-                        e.currentTarget.style.boxShadow = ''
-                      }}
-                    >
-                      {page.label} <i className="bi bi-arrow-up-right" style={{ fontSize: '0.75rem' }} />
-                    </a>
-                  )
-                })}
-              </div>
-            </div>
+     
           </div>
         </div>
       </div>

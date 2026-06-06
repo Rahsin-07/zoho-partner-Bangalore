@@ -65,7 +65,7 @@ export default function Problem() {
           <h2 className="section-title">
             What Happens When Zoho <span className="grad-blue-red">Setup Goes Wrong</span>
           </h2>
-       <p className="section-sub mx-auto" style={{ maxWidth: "1000px", textAlign: "justify" }}>
+       <p className="section-sub mx-auto" style={{ maxWidth: "1000px", textAlign:"center" }}>
             The majority of Zoho implementations are unsuccessful not because of the platform itself, but because of the way it is configured. The truth is that businesses don't see results because of poor configuration, lack of automation, and lack of training.
           </p>
         </div>
